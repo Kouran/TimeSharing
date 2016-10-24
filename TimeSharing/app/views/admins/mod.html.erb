@@ -1,0 +1,23 @@
+<body>
+<p class='titolo'>Pagina di Moderazione</p>
+<br>
+<hr>
+<br>
+<p class='importante'>Cancella Annuncio</p>
+<br>
+<form action="/annunci/cancella" method="delete">
+	ID Annuncio: <%= text_field_tag "id" %>
+	<%= hidden_field_tag "userid", @currentuser.id %>
+	<br>
+	<%= submit_tag("Cancella Annuncio") %>
+</form>
+<br>
+<hr>
+<br>
+<button class="bottone" action="/admins/transazioni">Visualizza Transazioni</button>
+<br>
+<hr>
+<br>
+<button class="bottone" action="/messaggi/messaggimod">Visualizza Segnalazioni ai Moderatori</button>
+</body>
+

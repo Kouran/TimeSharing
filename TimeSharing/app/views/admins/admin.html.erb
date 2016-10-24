@@ -1,0 +1,49 @@
+<head>
+<title>Pagina di Amministrazione</title>
+</head>
+<body>
+<p class="titolo">Amministrazione</p>
+<br>
+<p class="importante">Cancella Utente</p>
+<br>
+<form action="/utenti/cancella" method="delete">
+	Nick Utente: <%= text_field_tag "nick" %>
+	<%= hidden_field_tag "userid"%>
+	<br>
+	<%= submit_tag("Cancella Utente") %>
+</form>
+<br>
+<hr>
+<br>
+<button class="bottone" action="/admins/transazioniadmin">Visualizza Transazioni come Amministratore</button>
+<br>
+<hr>
+<br>
+<p class="importante">Modifica Portafogli</p>
+<form action="/utenti/portafogli" method="update">
+	Nick Utente: <%= text_field_tag "nick" %>
+	Quantità da Trasferire: <%= number_field_tag "somma" %>
+	<%= hidden_field_tag "userid"%>
+	<br>
+	<%= submit_tag("Modifica Portafogli") %>
+</form>
+<br>
+<hr>
+<br>
+<button class="bottone" action="/messaggi/messaggiadmin">Visualizza Segnalazioni agli Amministratori</button>
+<br>
+<hr>
+<br>
+<p class="importante">Modifica Permessi</p>
+<form action="/utenti/permessi" method="update">
+	Nick Utente: <%= text_field_tag "nick" %>
+	Permessi da Attribuire (0: utente sconosciuto, 1: utente basic, 2: moderatore, 3: amministratore): <%= number_field_tag "permessi", nil, min: 0, max: 3 %>
+	<%= hidden_field_tag "userid"%>
+	<br>
+	<%= submit_tag("Modifica Permessi") %>
+</form>
+<br>
+<hr>
+<br>
+<button class="bottone" action="/messaggi/ricerca">Ricerca Messaggi</button>
+</body>
