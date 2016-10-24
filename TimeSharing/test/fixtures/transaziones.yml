@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  annuncio: 1
+  offerente: MyString
+  lavoratore: MyString
+  transazione: 1
+
+two:
+  annuncio: 1
+  offerente: MyString
+  lavoratore: MyString
+  transazione: 1

@@ -1,0 +1,22 @@
+<p class="titolo">Transazioni - Versione Amministratore</p>
+ 
+<table>
+	<tr>
+		<th>Annuncio</th>
+		<th>Da</th>
+		<th>A</th>
+		<th>Somma</th>
+		<th></th>
+	</tr>
+ 
+	<% @transazioni.each do |transazione| %>
+		<tr>
+			<td><%= link_to "Annuncio", :controller => "annunci", :action => "mostra", :id => transazione.annuncio %> </td>
+			<td><%= transazione.offerente %></td>
+			<td><%= transazione.lavoratore %></td>
+			<td><%= transazione.somma %></td>
+			<td><%= link_to "Annulla Transazione", :controller => "transazioni", :action => "transazione", :id => transazione.id, :method => :delete, :confirm => "Sei sicuro?" %> </td>
+			
+		</tr>
+	<% end %>
+</table>

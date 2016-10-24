@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-get 'admins/admin' => 'admins#admin'
+post 'admins/admin' => 'admins#admin'
+post 'admins/mod' => 'admins#mod'
+get 'admins/transazioni' => 'admins#transazioni'
+get 'admins/transazioniadmin' => 'admins#transazioniadmin'
 
+post 'annunci/chiudi' => 'transazioni#crea'
+destroy 'transazioni/transazione/:id' => 'transazioni#annulla'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
