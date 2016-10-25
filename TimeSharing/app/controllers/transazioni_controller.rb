@@ -11,6 +11,9 @@ class TransazioniController < ApplicationController
 			else				
 			@transazione=Transazione.new(params(:transazione))
 			@transazione.save
+			@annuncio=Annuncio.find(@transazione.annuncio)
+			@annuncio.risolto=1
+			@annuncio.save
 			redirect_to :back
 		end
 	end
