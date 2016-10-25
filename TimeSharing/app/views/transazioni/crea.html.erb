@@ -1,0 +1,9 @@
+<p class="titolo">Chiudi questo annuncio</p>
+<p id="notice" color="red"><%= notice %></p>
+<form action="crea" method="post">
+	<%= hidden_field_tag "offerente"%>
+	<%= hidden_field_tag "annuncio", params[:id] %>
+	<%= text_field_tag "lavoratore" %>
+	<%= number_field_tag "transazione", nil, min: 0 %>
+	<%= submit_tag "Chiudi" %>
+</form>

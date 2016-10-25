@@ -1,10 +1,18 @@
 class TransazioniController < ApplicationController
 
 	def crea
-		@transazione=Transazione.new(params(:transazione))
-		
-		@transazione.save
-		redirect_to "/annunci/annuncio/#{transazione.id}"
+		if request.post?
+			if not Utente.exists?(nick: params(:lavoratore))
+				:notice="Attenzione, utente non trovato. Controllare eventuali errori di battitura"
+			elsif Utente.find_by(nick: params(:offerente)).ore<params(:transazione)
+				:notice="Attenzione, l'importo in suo possesso è insufficiente a coprire la transazione"
+			elsif params(:transazione)<0
+				:notice="Impossibile trasferire una quantità negativa di ore"
+			else				
+			@transazione=Transazione.new(params(:transazione))
+			@transazione.save
+			redirect_to :back
+		end
 	end
 	
 	def annulla
@@ -27,6 +35,6 @@ class TransazioniController < ApplicationController
 
 		#Elimina la transazione
 		@transazione.delete
-		redirect_to "/admins/annunciadmin"
+		redirect_to "/admins/transazioniadmin"
 	end
 end

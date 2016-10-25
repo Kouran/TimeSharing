@@ -10,7 +10,7 @@ post 'admins/mod' => 'admins#mod'
 get 'admins/transazioni' => 'admins#transazioni'
 get 'admins/transazioniadmin' => 'admins#transazioniadmin'
 
-post 'annunci/chiudi' => 'transazioni#crea'
+post 'annunci/chiudi/:id' => 'transazioni#crea'
 destroy 'transazioni/transazione/:id' => 'transazioni#annulla'
 
   # Example of regular route:
