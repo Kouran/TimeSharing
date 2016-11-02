@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titolo:</strong>
+  <%= @annuncio.titolo %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @annuncio.categoria %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @annuncio.descrizione %>
+</p>
+
+<p>
+  <strong>Zona:</strong>
+  <%= @annuncio.zona %>
+</p>
+
+<p>
+  <strong>Ore previste:</strong>
+  <%= @annuncio.ore_previste %>
+</p>
+
+<p>
+  <strong>Scadenza:</strong>
+  <%= @annuncio.scadenza %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @annuncio.data %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @annuncio.foto %>
+</p>
+
+<p>
+  <strong>Richiesta:</strong>
+  <%= @annuncio.richiesta %>
+</p>
+
+<p>
+  <strong>Risolta:</strong>
+  <%= @annuncio.risolta %>
+</p>
+
+<p>
+  <strong>Utente richiedente:</strong>
+  <%= @annuncio.utente_richiedente %>
+</p>
+
+<p>
+  <strong>Utente adempiente:</strong>
+  <%= @annuncio.utente_adempiente %>
+</p>
+
+<%= link_to 'Edit', edit_annuncio_path(@annuncio) %> |
+<%= link_to 'Back', annuncios_path %>

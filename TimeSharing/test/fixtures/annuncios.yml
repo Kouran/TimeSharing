@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titolo: MyString
+  categoria: MyString
+  descrizione: MyText
+  zona: MyText
+  ore_previste: 1.5
+  scadenza: 2016-11-02
+  data: 2016-11-02
+  foto: MyString
+  richiesta: false
+  risolta: false
+  utente_richiedente: 
+  utente_adempiente: 
+
+two:
+  titolo: MyString
+  categoria: MyString
+  descrizione: MyText
+  zona: MyText
+  ore_previste: 1.5
+  scadenza: 2016-11-02
+  data: 2016-11-02
+  foto: MyString
+  richiesta: false
+  risolta: false
+  utente_richiedente: 
+  utente_adempiente: 

@@ -1,4 +1,8 @@
-Rails.application.routes.draw do
+﻿Rails.application.routes.draw do
+  resources :annuncios
+
+  resources :utentes
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,7 +15,7 @@ get 'admins/transazioni' => 'admins#transazioni'
 get 'admins/transazioniadmin' => 'admins#transazioniadmin'
 
 post 'annunci/chiudi/:id' => 'transazioni#crea'
-destroy 'transazioni/transazione/:id' => 'transazioni#annulla'
+delete 'transazioni/transazione/:id' => 'transazioni#annulla'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
