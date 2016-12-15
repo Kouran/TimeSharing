@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @ad.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ad.description %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @ad.zone %>
+</p>
+
+<p>
+  <strong>Expected hours:</strong>
+  <%= @ad.expected_hours %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @ad.deadline %>
+</p>
+
+<p>
+  <strong>Request:</strong>
+  <%= @ad.request %>
+</p>
+
+<p>
+  <strong>Closed:</strong>
+  <%= @ad.closed %>
+</p>
+
+<p>
+  <strong>Applicant user:</strong>
+  <%= @ad.applicant_user %>
+</p>
+
+<p>
+  <strong>Fullfiller user:</strong>
+  <%= @ad.fullfiller_user %>
+</p>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

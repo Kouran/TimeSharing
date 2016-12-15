@@ -1,21 +1,28 @@
 Rails.application.routes.draw do
+  resources :ads
+
   resources :messages
 
   devise_for :users
-	
-	root 'welcome#index'	
+
+	root 'welcome#index'
 	get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
 	get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
 	get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-	
-	resource :conversations do 
+
+    
+    get 'Ads/Search' => 'ads#search'
+    get 'Ads/Result' => 'ads#result'
+    get 'Ads/My' => 'ads#my'
+
+	resource :conversations do
 		member do
 			post :reply
 			post :trash
 			post :untrash
-			end 
+			end
 		end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -73,7 +80,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-	
+
 
 
 end

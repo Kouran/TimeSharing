@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207053628) do
+ActiveRecord::Schema.define(version: 20161215112259) do
+
+  create_table "ads", force: true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.text     "description"
+    t.text     "zone"
+    t.float    "expected_hours"
+    t.date     "deadline"
+    t.boolean  "request"
+    t.boolean  "closed"
+    t.string   "applicant_user"
+    t.string   "fullfiller_user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
     t.integer "unsubscriber_id"
