@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :messages
+  
 
+  resources :messages
+  resources :users
   devise_for :users
 	
 	root 'welcome#index'	
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
 	get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-	
+	#get "users/new" => 
 	resource :conversations do 
 		member do
 			post :reply
@@ -17,6 +19,15 @@ Rails.application.routes.draw do
 			post :untrash
 			end 
 		end
+
+	#route per la registrazione
+	get "/signup" => "users#new"
+	post "/signup" => "users#create"
+	#sessione per il login
+	get "/login" => "sessions#new"
+	post "/login" => "sessions#create"
+	delete "/logout" => "sessions#destroy"
+	
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
