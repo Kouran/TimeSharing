@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215145218) do
+ActiveRecord::Schema.define(version: 20170103163109) do
 
-create_table "ads", force: true do |t|
+  create_table "ads", force: true do |t|
     t.string   "title"
     t.string   "category"
     t.text     "description"
@@ -27,7 +27,6 @@ create_table "ads", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
     t.integer "unsubscriber_id"
@@ -91,10 +90,20 @@ create_table "ads", force: true do |t|
     t.datetime "updated_at"
   end
 
+  create_table "transactions", force: true do |t|
+    t.string   "ad_id"
+    t.string   "from"
+    t.string   "to"
+    t.integer  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",           default: "", null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "surname"
     t.string   "nickname"
     t.string   "password_digest"
   end

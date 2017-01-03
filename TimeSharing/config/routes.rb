@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :transactions
+
   resources :messages
   resources :users
   resources :ads
