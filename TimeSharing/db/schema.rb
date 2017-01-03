@@ -99,6 +99,15 @@ ActiveRecord::Schema.define(version: 20170103163109) do
     t.datetime "updated_at"
   end
 
+  create_table "transaziones", force: true do |t|
+    t.integer  "annuncio"
+    t.string   "offerente"
+    t.string   "lavoratore"
+    t.integer  "transazione"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",           default: "", null: false
     t.datetime "created_at",                   null: false
