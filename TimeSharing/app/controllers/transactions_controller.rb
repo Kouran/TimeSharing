@@ -18,19 +18,25 @@ class TransactionsController < ApplicationController
   end
 
   def create
-	if not User.exists?(nickname: params(:fullfiller))
+	if not User.exists?(nickname: params(:to))
 		:notice="Attenzione, utente non trovato. Controllare eventuali errori di battitura"
 	#AGGIUNGERE PORTAFOGLI	
-#elsif User.find_by(nickname: params(:applicant)).ore<params(:amount)
+#elsif User.find_by(nickname: params(:from)).ore<params(:amount)
 		#:notice="Attenzione, l'importo in suo possesso è insufficiente a coprire la transazione"
 	elsif params(:amount)<0
 		:notice="Impossibile trasferire una quantità negativa di ore"
-	else				
-		@transaction=Transaction.new(transaction_params)
-		@transaction.save
-		@ad=Ad.find(@transaction.ad_id)
+	else			
+		@applicant=User.find_by(nickname: params(:from))
+		@fullfiller=User.find_by(nickname: params(:to))
+		@applicant.ore-=params(:amount)
+		@fullfiller.ore+=params(:amount)
+		@applicant.save
+		@fullfiller.save
+		@ad=Ad.find(params(:ad_id))
 		@ad.closed=true
 		@ad.save
+		@transaction=Transaction.new(transaction_params)
+		@transaction.save
 		redirect_to :back
   end
 
