@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :sender %><br>
-    <%= f.text_field :sender %>
+	
+    <%= f.hidden_field(:sender, :value => current_user.nickname) %>
   </div>
   <div class="field">
     <%= f.label :receiver %><br>

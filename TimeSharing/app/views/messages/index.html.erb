@@ -12,8 +12,9 @@
   </thead>
 
   <tbody>
-    <% @messages.each do |message| %>
+   <% @messages.each do |message| %>
       <tr>
+		
         <td><%= message.sender %></td>
         <td><%= message.receiver %></td>
         <td><%= message.title %></td>
@@ -29,3 +30,4 @@
 <br>
 
 <%= link_to 'New Message', new_message_path %>
+<%= link_to 'Back', "/"  %>

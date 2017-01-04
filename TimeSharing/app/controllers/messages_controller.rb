@@ -1,10 +1,16 @@
 class MessagesController < ApplicationController
+	include SessionsHelper
+	
   before_action :set_message, only: [:show, :edit, :update, :destroy]
-
+	
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
+	#@messages= Message.find_by(sender: current_user)
+	@user=User.find(current_user).nickname
+    @messages = Message.where("sender= '%s' or receiver= '%s'",  @user, @user ) 
+	if @messages==nil then redirect_to "/"
+	end 
   end
 
   # GET /messages/1
