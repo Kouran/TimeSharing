@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+	include SessionsHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -37,26 +39,32 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
-      if @user.update(user_params)
-	#
-      else
-	#
-      end
+	if not current_user.id==params[:id] then check_auth(3) end
+	@user.update(user_params)
   end
 
   # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
+	if not current_user.id==params[:id] then check_auth(3) end
+	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
+	@personaldata=PersonalDatum.find_by(user_id: @user.id)
+	@userplatformdata.destroy
+	@personaldata.destroy
     @user.destroy
-	#
+  end
+
+  def nick_destroy
+	check_auth(3)
+	@user=User.find_by(nickname: params[:nick])
+	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
+	@personaldata=PersonalDatum.find_by(user_id: @user.id)
+	@userplatformdata.destroy
+	@personaldata.destroy
+    @user.destroy
   end
 		
 
-	def conversation 
-		@conversation ||= mailbox.conversations.find(current_user)
-	end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

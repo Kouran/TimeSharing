@@ -16,6 +16,12 @@ Rails.application.routes.draw do
     get "welcome/result" => "ads#result"
 	#messages/index.html.erb
 	get "messages" => "messages#index"
+	#aggiungere queste routes
+	#get "/messages/admin_report" => "messages#qualcosa"		Invia messaggi a Admin
+	#get "/messages/mod_report" => "messages#qualcos'altro"		Invia messaggi a Mod
+	#get "/messages/admin" => "messages#cosa"					Visualizza messaggi a Admin
+	#get "/messages/mod" => "messages#altracosa"				Visualizza messaggi a Mod
+	#get "/messages/search" => "messages#search"				Ricerca Messaggi
 	
 	#route per la registrazione
 	get "/signup" => "users#new"
@@ -30,6 +36,17 @@ Rails.application.routes.draw do
 	get "Ads/My" => "ads#my"
 	get "Ads/New" => "ads#new"
 
+	#Aggiungere una route per creare le transazioni
+	#delete "Ads/:id" => "transactions#new"
+
+	#route per le pagine di amministrazione
+	get "/admin" => "administration#admin"
+	get "/mod" => "administration#mod"
+	update "/user_platform_data/permission" => "user_platform_data#permission"
+	update "/user_platform_data/wallet" => "user_platform_data#wallet"
+	delete "/users/nick_destroy" => "users#nick_destroy"
+	get "/notlogged" => "administration#notlogged"
+	get "/unauthorized" => "administration#unauthorized"
 
 
 

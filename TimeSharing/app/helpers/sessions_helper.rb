@@ -20,4 +20,15 @@ module SessionsHelper
 		@current_user=nil
 	end
 
+	def check_auth(level=0)
+		#controlla che l'utente sia loggato
+		if not logged_in? then redirect_to "/notlogged" end
+		#controlla che l'utente abbia "confermato" la sua registrazione
+		@userid=current_user.id
+		if not UserPlatformDatum.exists?(user_id: @userid) then redirect_to "/user_platform_data/new" end
+		#controlla che l'utente abbia i permessi necessari
+		@userpermission=UserPlatformDatum.find_by(id: @userid).access
+		if not @userpermission>=level then redirect_to "/unauthorized" end
+	end
+
 end

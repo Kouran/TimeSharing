@@ -1,8 +1,9 @@
 class UserPlatformDataController < ApplicationController
   before_action :set_user_platform_datum, only: [:show]
 
+	include SessionsHelper
+
   # GET /user_platform_data/1
-  # GET /user_platform_data/1.json
   def show
 	@user=User.find_by(id: @user_platform_datum.user_id)
   end
@@ -16,7 +17,6 @@ class UserPlatformDataController < ApplicationController
   end
 
   # POST /user_platform_data
-  # POST /user_platform_data.json
   def create
     @user_platform_datum = UserPlatformDatum.new(user_platform_datum_params)
 	@user_platform_datum.access=1
@@ -24,13 +24,23 @@ class UserPlatformDataController < ApplicationController
 	@user_platform_datum.applying_rating=0
 	@user_platform_datum.total_rating=0
 	@user_platform_datum.wallet=2
-    respond_to do |format|
-      if @user_platform_datum.save
-        format.html { redirect_to @user_platform_datum, notice: 'User platform datum was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
+    redirect_to @user_platform_datum
+  end
+
+  def permission
+	check_auth(3)
+	@user=User.find_by(nickname: params[:nick])
+	@data=UserPlatformDatum.find_by(user_id: @user.id)
+	@data.access=params[:permission]
+	@data.save
+  end
+
+  def wallet
+	check_auth(3)
+	@user=User.find_by(nickname: params[:nick])
+	@data=UserPlatformDatum.find_by(user_id: @user.id)
+	@data.wallet+=params[:amount]
+	@data.save
   end
 
   private

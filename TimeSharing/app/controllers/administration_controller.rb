@@ -1,18 +1,19 @@
 class AdministrationController < ApplicationController
+
+	include SessionsHelper
+
 	def admin
-		#Aggiungere controllo sui permessi utente
+		check_auth(3)
 	end
 
 	def mod
-		#Aggiungere controllo sui permessi utente
+		check_auth(2)
 	end
 
-	def transactions
-		#Aggiungere controllo sui permessi utente
-		@transactions=Transaction.all
+
+	def notlogged
 	end
-	
-	def admin_transactions
-		#Aggiungere controllo sui permessi utente
-		@transactions=Transaction.all
+
+	def unauthorized
+	end
 end

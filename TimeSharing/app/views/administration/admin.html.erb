@@ -1,0 +1,46 @@
+<head>
+<title>Administration Page</title>
+</head>
+<body>
+Administration
+<br>
+Delete User
+<br>
+<form action="/users/nick_destroy" method="delete">
+	Nickname: <%= text_field_tag "nick" %>
+	<br>
+	<%= submit_tag("Delete User") %>
+</form>
+<br>
+<hr>
+<br>
+<%= link_to "See transactions", "/transactions" %>
+<br>
+<hr>
+<br>
+Wallet Update
+<form action="/user_platform_data/wallet" method="update">
+	Nickname: <%= text_field_tag "nick" %>
+	Amount to be added: <%= number_field_tag "amount" %>
+	<br>
+	<%= submit_tag("Update") %>
+</form>
+<br>
+<hr>
+<br>
+<button action="/messages/admin">See received reports</button>
+<br>
+<hr>
+<br>
+Grant Permissions
+<form action="/user_platform_data/permission" method="update">
+	Nickname: <%= text_field_tag "nick" %>
+	Permissions to grant (0: Unauthorized user, 1: Basic user, 2: Mod, 3: Administrator): <%= number_field_tag "permission", nil, min: 0, max: 3 %>
+	<br>
+	<%= submit_tag("Grant") %>
+</form>
+<br>
+<hr>
+<br>
+<button action="/messagges/search">Search Messages</button>
+</body>

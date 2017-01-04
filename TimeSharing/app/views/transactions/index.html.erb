@@ -1,0 +1,23 @@
+<p class="titolo">Transactions</p>
+ 
+<table>
+	<tr>
+		<th>Ad</th>
+		<th>Applicant</th>
+		<th>Fullfiller</th>
+		<th>Amount</th>
+		<th>Report an abuse</th>
+		<%= if @admin==1 %><th>Cancel Transaction</th><% end %>
+	</tr>
+ 
+	<% @transactions.each do |transaction| %>
+		<tr>
+			<td><%= link_to "Ad", "/ads/@{transaction.ad}" %> </td>
+			<td><%= transaction.applicant %></td>
+			<td><%= transaction.fullfiller %></td>
+			<td><%= transaction.amount %></td>
+			<td><%= link_to "Report an Abuse", "/messages/admin_report" %> </td>
+			<%= if @admin==1 %><td><%= link_to "Cancel", "/transactions/destroy", method: :delete %>
+		</tr>
+	<% end %>
+</table>
