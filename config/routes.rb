@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
 
+
   resources :transactions
+
   resources :messages
   resources :users
   resources :ads
-
+  devise_for :users
 
 	root 'welcome#index'
+	get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+	get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+	get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 	#messages/index.html.erb
 	get "messages" => "messages#index"
 	#get "users/new" =>
+	resource :conversations do
+		member do
+			post :reply
+			post :trash
+			post :untrash
+			end
+		end
 
 	#route per la registrazione
 	get "/signup" => "users#new"
@@ -23,6 +35,7 @@ Rails.application.routes.draw do
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
     get "Ads/Result" => "ads#result"
+
 
 
 

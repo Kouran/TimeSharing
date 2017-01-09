@@ -12,13 +12,15 @@ def result
     parametro3=params[:search3]
     parametro4=params[:search4]
 
-    @annuncios = Annuncio.where("titolo LIKE ? and categoria LIKE ? and descrizione LIKE ? and utente_richiedente LIKE ?", "%#{parametro1}%", "%#{parametro2}%", "%#{parametro3}%", "%#{parametro4}%").order("created_at DESC")
+    @ads = Ad.where("title LIKE ? and category LIKE ? and description LIKE ? and applicant_user LIKE ?", "%#{parametro1}%", "%#{parametro2}%", "%#{parametro3}%", "%#{parametro4}%").order("created_at DESC")
 end
 
 def my
-    @annuncios = Annuncio.where("utente_richiedente LIKE ?", "%#{id}%")
+    @ads = Ad.where("applicant_user LIKE ?", "%#{id}%")
 
 end
+
+
 
 
   def index
@@ -27,6 +29,7 @@ end
   end
 
   def show
+      @applicant=User.find_by(nickname: @ad.applicant_user).id
     respond_with(@ad)
   end
 

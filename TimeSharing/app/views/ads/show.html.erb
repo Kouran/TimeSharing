@@ -41,7 +41,9 @@
 </p>
 
 <p>
-  <strong>Applicant user:</strong>
+  <!-- <strong>Applicant user:</strong> -->
+  <%= link_to 'Applicant user', "/users/#{@applicant}" %>
+
   <%= @ad.applicant_user %>
 </p>
 
@@ -52,3 +54,6 @@
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>
+
+
+<%= link_to 'Come back', "/" %>
