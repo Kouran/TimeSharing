@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
 
+
   resources :transactions
+
   resources :messages
   resources :users
   resources :ads
 
-
 	root 'welcome#index'
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-	#get "users/new" =>
-
+	
 	#route per la registrazione
 	get "/signup" => "users#new"
 	post "/signup" => "users#create"
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 	get"Ads/Search" => "ads#search"
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
-    get "Ads/Result" => "ads#result"
+
 
 
 
