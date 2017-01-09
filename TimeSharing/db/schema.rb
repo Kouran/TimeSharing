@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170103163109) do
+ActiveRecord::Schema.define(version: 20170109151632) do
 
   create_table "ads", force: true do |t|
     t.string   "title"
@@ -37,20 +37,43 @@ ActiveRecord::Schema.define(version: 20170103163109) do
     t.datetime "updated_at"
   end
 
+  create_table "personal_data", force: true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.date     "date_of_birth"
+    t.string   "city"
+    t.string   "actual_job"
+    t.string   "phone"
+    t.text     "skills"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "transactions", force: true do |t|
-    t.string   "ad_id"
     t.string   "from"
     t.string   "to"
     t.integer  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ad_id"
+  end
+
+  create_table "user_platform_data", force: true do |t|
+    t.integer  "access"
+    t.integer  "fullfilling_rating"
+    t.integer  "applying_rating"
+    t.integer  "total_rating"
+    t.integer  "wallet"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
     t.string   "email",           default: "", null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.string   "surname"
     t.string   "nickname"
     t.string   "password_digest"
   end

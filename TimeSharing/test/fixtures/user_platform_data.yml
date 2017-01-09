@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  access: 1
+  fullfilling_rating: 1
+  applying_rating: 1
+  total_rating: 1
+  wallet: 1
+
+two:
+  user_id: MyString
+  access: 1
+  fullfilling_rating: 1
+  applying_rating: 1
+  total_rating: 1
+  wallet: 1

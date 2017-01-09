@@ -1,0 +1,20 @@
+<%= form_for(@user_platform_datum) do |f| %>
+  <% if @user_platform_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_platform_datum.errors.count, "error") %> prohibited this user_platform_datum from being saved:</h2>
+
+      <ul>
+      <% @user_platform_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field(:user_id, :value => current_user.id) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

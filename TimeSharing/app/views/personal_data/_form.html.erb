@@ -1,0 +1,47 @@
+<%= form_for(@personal_datum) do |f| %>
+  <% if @personal_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal_datum.errors.count, "error") %> prohibited this personal_datum from being saved:</h2>
+
+      <ul>
+      <% @personal_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+<%= f.hidden_field(:user_id, :value => current_user.id) %>
+</div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :actual_job %><br>
+    <%= f.text_field :actual_job %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_area :skills %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

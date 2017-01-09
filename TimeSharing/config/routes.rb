@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :user_platform_data
+
+  resources :personal_data
+
   resources :transactions
 
   resources :messages
@@ -8,11 +12,11 @@ Rails.application.routes.draw do
   resources :ads
 
 	root 'welcome#index'
+	get "welcome/homepage" => "welcome#homepage"
+    get "welcome/result" => "ads#result"
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-    get "welcome/homepage" => "welcome#homepage"
-    get "welcome/result" => "ads#result"
-
+	
 	#route per la registrazione
 	get "/signup" => "users#new"
 	post "/signup" => "users#create"
@@ -24,7 +28,7 @@ Rails.application.routes.draw do
 	get"Ads/Search" => "ads#search"
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
-    get "Ads/New" => "ads#new"
+	get "Ads/New" => "ads#new"
 
 
 

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.nickname %>
+</p>
+
+<p>
+  <strong>Access:</strong>
+  <%= @user_platform_datum.access %>
+</p>
+
+<p>
+  <strong>Fullfilling rating:</strong>
+  <%= @user_platform_datum.fullfilling_rating %>
+</p>
+
+<p>
+  <strong>Applying rating:</strong>
+  <%= @user_platform_datum.applying_rating %>
+</p>
+
+<p>
+  <strong>Total rating:</strong>
+  <%= @user_platform_datum.total_rating %>
+</p>
+
+<p>
+  <strong>Wallet:</strong>
+  <%= @user_platform_datum.wallet %>
+</p>
+
+<%= link_to 'Back', root_path %>
