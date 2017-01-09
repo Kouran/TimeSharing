@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 	root 'welcome#index'
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-	
+    get "welcome/homepage" => "welcome#homepage"
+    get "welcome/result" => "ads#result"
+
 	#route per la registrazione
 	get "/signup" => "users#new"
 	post "/signup" => "users#create"
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
 	get"Ads/Search" => "ads#search"
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
+    get "Ads/New" => "ads#new"
 
 
 

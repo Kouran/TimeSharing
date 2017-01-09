@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109123116) do
+ActiveRecord::Schema.define(version: 20170103163109) do
 
   create_table "ads", force: true do |t|
     t.string   "title"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170109123116) do
     t.string   "email",           default: "", null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "surname"
     t.string   "nickname"
     t.string   "password_digest"
   end
