@@ -1,2 +1,0 @@
-      invoke  active_record
-    conflict    db/migrate/20161206221856_add_fields_to_user.rb

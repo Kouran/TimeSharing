@@ -4,21 +4,9 @@ Rails.application.routes.draw do
   resources :messages
   resources :users
   resources :ads
-  devise_for :users
-  resources :conversations do
-	member do
-	    post :reply
-	    post :trash
-	    post :untrash
-	#    post :mark_as_read
-	    post :show_conversation
-	end	
-  end 
+  
 	
-	root 'welcome#index'	
-	get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
-	get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
-	get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+	root 'welcome#index'
 	#messages/index.html.erb
 	get "messages" => "messages#index"
 	#get "users/new" => 
@@ -35,9 +23,6 @@ Rails.application.routes.draw do
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
 	
-	#route for conversations
-	
-	get "conversations/index" => "conversations#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

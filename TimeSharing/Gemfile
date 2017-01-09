@@ -41,11 +41,8 @@ gem 'spring',        group: :development
 #source 'https://github.com/frodefi/rails-messaging'
 #gem 'messaging',git: 'https://github.com/frodefi/rails-messaging' 
 
-#gem 'mailboxer', git: 'https://github.com/ging/mailboxer.git'
 
 gem 'bootstrap-sass'
-gem 'devise'
-gem 'mailboxer'
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
