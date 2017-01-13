@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
 	get "Ads/New" => "ads#new"
+	delete "/ads/delete" => "ads#param_delete"
 
 	#Aggiungere una route per creare le transazioni
 	#delete "Ads/:id" => "transactions#new"

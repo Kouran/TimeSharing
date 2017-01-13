@@ -1,4 +1,7 @@
 class AdsController < ApplicationController
+
+	include SessionsHelper
+
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -55,6 +58,12 @@ end
   def destroy
     @ad.destroy
     respond_with(@ad)
+  end
+
+  def param_delete
+	check_auth(2)
+	@ad = Ad.find_by(id: params[:id])
+	@ad.destroy
   end
 
   private

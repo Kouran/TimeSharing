@@ -1,0 +1,21 @@
+<body>
+<p class='title'>Moderation Page</p>
+<br>
+<hr>
+<br>
+<p class='important'>Delete Ad</p>
+<br>
+<form action="/ads/delete" method="delete">
+	ID Annuncio: <%= text_field_tag "id" %>
+	<br>
+	<%= submit_tag("Delete Ad") %>
+</form>
+<br>
+<hr>
+<br>
+<button action="/transactions">See Transactions</button>
+<br>
+<hr>
+<br>
+<button action="/messages/mod">See received reports</button>
+</body>
