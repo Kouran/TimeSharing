@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :ads
 
-	root 'welcome#index'
+	root 'welcome#home'
 	get "welcome/homepage" => "welcome#homepage"
     get "welcome/result" => "ads#result"
 	#messages/index.html.erb
