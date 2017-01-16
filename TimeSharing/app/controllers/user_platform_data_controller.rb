@@ -10,10 +10,11 @@ class UserPlatformDataController < ApplicationController
 
   # GET /user_platform_data/new
   def new
-    if current_user==nil then redirect_to "/" end
+    if current_user==nil then redirect_to "/" and return end
 	@userid=current_user
-	if UserPlatformDatum.exists?(user_id: @userid) then redirect_to "/" end
+	if UserPlatformDatum.exists?(user_id: @userid) then redirect_to "/" and return end
     @user_platform_datum = UserPlatformDatum.new
+	redirect_to "/"
   end
 
   # POST /user_platform_data

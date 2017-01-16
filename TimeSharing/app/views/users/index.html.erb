@@ -1,17 +1,20 @@
 <h1>Listing users</h1>
-
+<%= stylesheet_link_tag "micro", media: "all"%>
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+    <th>Name</th>
+	<th>Email</th>
+	<th>Registration Date</th>
+	<th></th>
+	<th></th>
+	<th></th>
     </tr>
   </thead>
 
   <tbody>
 	<tr>
-	<td>Name</td>
-	<td>Email</td>
-	<td>Registration Date</td>
+	
     <% @users.each do |user| %>
       <tr>
 	<td><%= user.nickname %></td>
