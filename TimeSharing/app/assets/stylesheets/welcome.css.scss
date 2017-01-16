@@ -1,3 +1,13 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body {
+    font-size: 1200px;
+    line-height: 19px;
+    font-family: arial, sans-serif;
+    color: #999ea2;
+    background: #edf6ff url(/app/assets/images/body.png) repeat-x 0 0;
+    min-width: 956px;}
