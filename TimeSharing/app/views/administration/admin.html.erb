@@ -19,7 +19,7 @@ Delete User
 <hr>
 <br>
 Wallet Update
-<form action="/user_platform_data/wallet" method="update">
+<form action="/user_platform_data/wallet" method="put">
 	Nickname: <%= text_field_tag "nick" %>
 	Amount to be added: <%= number_field_tag "amount" %>
 	<br>
@@ -33,7 +33,7 @@ Wallet Update
 <hr>
 <br>
 Grant Permissions
-<form action="/user_platform_data/permission" method="update">
+<form action="/user_platform_data/permission" method="put">
 	Nickname: <%= text_field_tag "nick" %>
 	Permissions to grant (0: Unauthorized user, 1: Basic user, 2: Mod, 3: Administrator): <%= number_field_tag "permission", nil, min: 0, max: 3 %>
 	<br>

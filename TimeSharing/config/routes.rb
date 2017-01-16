@@ -35,7 +35,7 @@ Rails.application.routes.draw do
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
 	get "Ads/New" => "ads#new"
-	delete "/ads/delete" => "ads#param_delete"
+	
 
 	#Aggiungere una route per creare le transazioni
 	#delete "Ads/:id" => "transactions#new"
@@ -43,9 +43,10 @@ Rails.application.routes.draw do
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
 	get "/mod" => "administration#mod"
-	update "/user_platform_data/permission" => "user_platform_data#permission"
-	update "/user_platform_data/wallet" => "user_platform_data#wallet"
+	put "/user_platform_data/permission" => "user_platform_data#permission"
+	put "/user_platform_data/wallet" => "user_platform_data#wallet"
 	delete "/users/nick_destroy" => "users#nick_destroy"
+	delete "/ads/delete" => "ads#param_delete"
 	get "/notlogged" => "administration#notlogged"
 	get "/unauthorized" => "administration#unauthorized"
 
