@@ -40,13 +40,13 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-	if not current_user.id==params[:id] then check_auth(3) end
+	if not current_user==params[:id] then check_auth(3) end
 	@user.update(user_params)
   end
 
   # DELETE /users/1
   def destroy
-	if not current_user.id==params[:id] then check_auth(3) end
+	if not current_user==params[:id] then check_auth(3) end
 	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
 	@personaldata=PersonalDatum.find_by(user_id: @user.id)
 	@userplatformdata.destroy

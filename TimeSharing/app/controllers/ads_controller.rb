@@ -56,6 +56,7 @@ end
   end
 
   def destroy
+	if not current_user==params[:id] then check_auth(2) end
     @ad.destroy
     respond_with(@ad)
   end
