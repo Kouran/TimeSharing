@@ -17,9 +17,10 @@
   </div>
   <div class="field">
     <%= f.label :receiver %><br>
-	
-    <%= f.text_field :receiver %>
-  </div>
+
+    <%= f.text_field :receiver, class: "form-control", disabled: !is_admin? %>
+			  
+	</div>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

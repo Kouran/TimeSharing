@@ -1,16 +1,16 @@
 class MessagesController < ApplicationController
 	include SessionsHelper
-	
+  before_action :logged_in?, only: [:index]#, notice => 'You re not logged'
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 	
   # GET /messages
   # GET /messages.json
   def index
 	#@messages= Message.find_by(sender: current_user)
-	@user=User.find(current_user).nickname
-    @messages = Message.where("sender= '%s' or receiver= '%s'",  @user, @user ) 
-	if @messages==nil then redirect_to "/"
-	end 
+
+		@user=User.find(current_user).nickname
+    	@messages = Message.where("sender= '%s' or receiver= '%s'",  @user, @user )
+
   end
 
   # GET /messages/1
@@ -67,12 +67,14 @@ class MessagesController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_message
       @message = Message.find(params[:id])
     end
-
+	
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
       params.require(:message).permit(:sender, :receiver, :title, :body)

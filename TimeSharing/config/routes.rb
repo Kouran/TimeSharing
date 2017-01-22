@@ -14,14 +14,17 @@ Rails.application.routes.draw do
 	root 'welcome#home'
 	get "welcome/homepage" => "welcome#homepage"
     get "welcome/result" => "ads#result"
-	#messages/index.html.erb
+	#messages/index.html.erb 
 	get "messages" => "messages#index"
+	
 	#aggiungere queste routes
-	#get "/messages/admin_report" => "messages#qualcosa"		Invia messaggi a Admin
-	#get "/messages/mod_report" => "messages#qualcos'altro"		Invia messaggi a Mod
-	#get "/messages/admin" => "messages#cosa"					Visualizza messaggi a Admin
-	#get "/messages/mod" => "messages#altracosa"				Visualizza messaggi a Mod
-	#get "/messages/search" => "messages#search"				Ricerca Messaggi
+	#get "/messages/admin_report" => "messages#reportToAdm"		#Invia messaggi a Admin
+	
+	#get "/messages/admin_report" => "messages#"
+	#get "/messages/mod_report" => "messages#reportToMod"		Invia messaggi a Mod
+	#get "/messages/admin" => "messages#adminShow"					Visualizza messaggi a Admin
+	#get "/messages/mod" => "messages#modShow"				Visualizza messaggi a Mod
+	#get "/messages/search" => "messages#searchForAdmin"				Ricerca Messaggi per l'Admin
 	
 	#route per la registrazione
 	get "/signup" => "users#new"
@@ -47,7 +50,7 @@ Rails.application.routes.draw do
 	put "/user_platform_data/wallet" => "user_platform_data#wallet"
 	delete "/users/nick_destroy" => "users#nick_destroy"
 	delete "/ads/delete" => "ads#param_delete"
-	get "/notlogged" => "administration#notlogged"
+	get "administration/notlogged" => "administration#notlogged"
 	get "/unauthorized" => "administration#unauthorized"
 
 
