@@ -50,4 +50,4 @@ gem 'chosen-rails'
 
 
 
-
+gem 'rspec-rails', group: :development,group: :test
