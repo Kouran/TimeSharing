@@ -18,11 +18,10 @@ Rails.application.routes.draw do
 	get "messages" => "messages#index"
 	
 	#aggiungere queste routes
-	#get "/messages/admin_report" => "messages#reportToAdm"		#Invia messaggi a Admin
+	get "/admin_report" => "messages#admin_report"		#Invia messaggi a Admin
 	
-	#get "/messages/admin_report" => "messages#"
 	#get "/messages/mod_report" => "messages#reportToMod"		Invia messaggi a Mod
-	#get "/messages/admin" => "messages#adminShow"					Visualizza messaggi a Admin
+	get "/adminmessages" => "messages#admin"
 	#get "/messages/mod" => "messages#modShow"				Visualizza messaggi a Mod
 	#get "/messages/search" => "messages#searchForAdmin"				Ricerca Messaggi per l'Admin
 	
@@ -41,7 +40,7 @@ Rails.application.routes.draw do
 	
 
 	#Aggiungere una route per creare le transazioni
-	#delete "Ads/:id" => "transactions#new"
+	delete "Ads/:id" => "transactions#new"
 
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
@@ -50,7 +49,7 @@ Rails.application.routes.draw do
 	put "/user_platform_data/wallet" => "user_platform_data#wallet"
 	delete "/users/nick_destroy" => "users#nick_destroy"
 	delete "/ads/delete" => "ads#param_delete"
-	get "administration/notlogged" => "administration#notlogged"
+	get "/notlogged" => "administration#notlogged"
 	get "/unauthorized" => "administration#unauthorized"
 
 

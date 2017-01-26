@@ -16,10 +16,7 @@
     <%= f.hidden_field(:sender, :value => current_user.nickname) %>
   </div>
   <div class="field">
-    <%= f.label :receiver %><br>
-
-    <%= f.text_field :receiver, class: "form-control", disabled: !is_admin? %>
-			  
+    <%= f.hidden_field(:receiver, :value => "Admin") %>   
 	</div>
   <div class="field">
     <%= f.label :title %><br>

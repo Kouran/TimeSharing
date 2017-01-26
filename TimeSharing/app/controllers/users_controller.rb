@@ -30,6 +30,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
 	log_in @user
+	@user_platform_datum=UserPlatformDatum.create(:user => @user)
+	@user_platform_datum.access=1
+	@user_platform_datum.fullfilling_rating=0
+	@user_platform_datum.applying_rating=0
+	@user_platform_datum.total_rating=0
+	@user_platform_datum.wallet=2
+	@user_platform_datum.save
+	@user.plat=@user_platform_datum
 	flash[:success]="Welcome to TimeSharing!"
 	redirect_to @user
       else

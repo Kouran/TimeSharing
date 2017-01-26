@@ -28,6 +28,7 @@
 				<!-- header -->
 				<header class="header">
 					<h1 id="logo"><a href="#">Proper</a></h1>
+					
 					<nav id="navigation">
 						<ul>
 							<li class="active"><a href="/">Home</a></li>
@@ -70,6 +71,11 @@
 					<div class="cl">&nbsp;</div>
 				</header>
 				<!-- end of header -->
+				<p> 
+					<% if not current_user%>
+						<%= flash[:notice] %>
+					<% end %>
+				</p>
 				<div class="main">
 					<!-- slider -->
 					<div class="flexslider">

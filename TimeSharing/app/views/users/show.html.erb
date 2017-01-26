@@ -13,5 +13,6 @@
   <strong>Registration Date:</strong>
   <%= @user.created_at %>
 </p>
+<%= link_to 'Edit your personal data', '/personal_data/new' %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

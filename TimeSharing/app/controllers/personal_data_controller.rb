@@ -10,9 +10,11 @@ class PersonalDataController < ApplicationController
 
   # GET /personal_data/new
   def new
-	if current_user==nil then redirect_to "/" end
+	if current_user==nil then redirect_to "/" and return end
 	@userid=current_user
-	if PersonalDatum.exists?(user_id: @userid) then redirect_to "/" end
+	if PersonalDatum.exists?(user_id: @userid) then
+	@plat=PersonalDatum.find_by(user_id: @userid).id
+	redirect_to "/personal_data/#{@plat}/edit" and return end
     @personal_datum = PersonalDatum.new
   end
 

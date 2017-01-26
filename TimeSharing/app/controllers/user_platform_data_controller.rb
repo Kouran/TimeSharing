@@ -5,27 +5,6 @@ class UserPlatformDataController < ApplicationController
 
   # GET /user_platform_data/1
   def show
-	@user=User.find_by(id: @user_platform_datum.user_id)
-  end
-
-  # GET /user_platform_data/new
-  def new
-    if current_user==nil then redirect_to "/" and return end
-	@userid=current_user
-	if UserPlatformDatum.exists?(user_id: @userid) then redirect_to "/" and return end
-    @user_platform_datum = UserPlatformDatum.new
-	redirect_to "/"
-  end
-
-  # POST /user_platform_data
-  def create
-    @user_platform_datum = UserPlatformDatum.new(user_platform_datum_params)
-	@user_platform_datum.access=1
-	@user_platform_datum.fullfilling_rating=0
-	@user_platform_datum.applying_rating=0
-	@user_platform_datum.total_rating=0
-	@user_platform_datum.wallet=2
-    redirect_to @user_platform_datum
   end
 
   def permission

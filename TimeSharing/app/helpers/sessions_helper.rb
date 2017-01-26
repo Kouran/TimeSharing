@@ -11,8 +11,11 @@ module SessionsHelper
 	
 
 	#Logged in boolean function
-	def logged_in? 
-		current_user.present?
+	def logged_in?
+		if not current_user.present? then redirect_to "/" and return false
+		end
+		current_user.present? 
+				
 	end
 
 	#Log out
@@ -23,20 +26,22 @@ module SessionsHelper
 
 	def check_auth(level=0)
 		#controlla che l'utente sia loggato
-		if not logged_in? then redirect_to "/administration/notlogged" and return end
-		#controlla che l'utente abbia "confermato" la sua registrazione
-		@userid=current_user
-		if not UserPlatformDatum.exists?(user_id: @userid) then redirect_to "/user_platform_data/new" and return end
+		unless current_user.present? then
+			return false
+		end
+		userid=current_user
 		#controlla che l'utente abbia i permessi necessari
-		@userpermission=UserPlatformDatum.find_by(id: @userid).access
-		if not @userpermission>=level then redirect_to "/unauthorized" end
-		
+		userpermission=UserPlatformDatum.find_by(user: userid).access
+		unless userpermission>=level then
+			return false
+		end
+		return true
 	end
+
 	# controlla se è amministratore
-	def is_admin
- 		@user=UserPlatformDatum.find_by(user_id: current_user)
-		return @user.access >= 3 
- 
+	def is_admin?
+		unless check_auth(3) then redirect_to "/" and return false end
+		return true
 	end
 
 end

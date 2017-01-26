@@ -51,13 +51,17 @@ ActiveRecord::Schema.define(version: 20170109151632) do
   end
 
   create_table "transactions", force: true do |t|
-    t.string   "from"
-    t.string   "to"
+    t.integer  "from_id"
+    t.integer  "to_id"
     t.integer  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "ad_id"
   end
+
+	add_index :transactions, :from_id
+	add_index :transactions, :to_id
+	add_index :transactions, :ad_id
 
   create_table "user_platform_data", force: true do |t|
     t.integer  "access"
@@ -77,6 +81,7 @@ ActiveRecord::Schema.define(version: 20170109151632) do
     t.string   "surname"
     t.string   "nickname"
     t.string   "password_digest"
+	t.integer  "plat_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
