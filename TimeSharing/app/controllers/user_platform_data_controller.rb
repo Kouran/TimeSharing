@@ -1,5 +1,6 @@
 class UserPlatformDataController < ApplicationController
-  before_action :set_user_platform_datum, only: [:show]
+	before_action :set_user_platform_datum, only: [:show]
+	before_action :is_admin?, only: [:permission, :wallet]
 
 	include SessionsHelper
 
@@ -8,7 +9,6 @@ class UserPlatformDataController < ApplicationController
   end
 
   def permission
-	check_auth(3)
 	@user=User.find_by(nickname: params[:nick])
 	@data=UserPlatformDatum.find_by(user_id: @user.id)
 	@data.access=params[:permission]
@@ -16,7 +16,6 @@ class UserPlatformDataController < ApplicationController
   end
 
   def wallet
-	check_auth(3)
 	@user=User.find_by(nickname: params[:nick])
 	@data=UserPlatformDatum.find_by(user_id: @user.id)
 	@data.wallet+=params[:amount]
@@ -31,6 +30,6 @@ class UserPlatformDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_platform_datum_params
-      params.require(:user_platform_datum).permit(:user_id, :access, :fullfilling_rating, :applying_rating, :total_rating, :wallet)
+      params.require(:user_platform_datum).permit(:user_id, :access, :wallet)
     end
 end

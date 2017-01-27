@@ -65,9 +65,6 @@ ActiveRecord::Schema.define(version: 20170109151632) do
 
   create_table "user_platform_data", force: true do |t|
     t.integer  "access"
-    t.integer  "fullfilling_rating"
-    t.integer  "applying_rating"
-    t.integer  "total_rating"
     t.integer  "wallet"
     t.datetime "created_at"
     t.datetime "updated_at"

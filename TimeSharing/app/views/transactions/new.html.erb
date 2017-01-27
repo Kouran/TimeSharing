@@ -1,9 +1,8 @@
 <p class="titolo">Close this Ad</p>
 <p id="notice" color="red"><%= notice %></p>
 <form action="crea" method="post">
-	<%= hidden_field_tag "from", @username%>
 
-	<%= hidden_field_tag "ad_id", params[:id] %>
+	<%= hidden_field_tag "id", params[:id] %>
 
 	<%= text_field_label "Fullfiller" =>
 	<%= text_field_tag "to" %>

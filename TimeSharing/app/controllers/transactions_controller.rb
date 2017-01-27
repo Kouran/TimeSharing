@@ -2,11 +2,13 @@ class TransactionsController < ApplicationController
 	
 	include SessionsHelper
 
-  before_action :set_transaction, only: [:show, :destroy]
+	before_action :logged_in?
+	before_action :set_transaction, only: [:show, :destroy]
+	before_action :is_mod?, only: [:index]
+	before_action :is_admin?, only: [:destroy]
 
 
   def index
-	check_auth(2)
 	@admin=0
 	if UserPlatformDatum.find_by(id: current_user.id).access==3 then @admin=1 end
     @transactions = Transaction.all
@@ -16,7 +18,6 @@ class TransactionsController < ApplicationController
   end
 
   def new
-	@username=current_user.nickname
     @transaction = Transaction.new
   end
 
@@ -28,29 +29,32 @@ class TransactionsController < ApplicationController
 	elsif params(:amount)<0
 		:notice="Hours must be not negative"
 	else			
-		@applicant=User.find_by(nickname: params(:from))
+		@transaction=Transaction.new
+		@applicant=User.find(current_user)
+		@transaction.from=@applicant
 		@applicant=UserPlatformDatum.find_by(user_id: @applicant.id)
 		@fullfiller=User.find_by(nickname: params(:to))
+		@transaction.to=@fullfiller
 		@fullfiller=UserPlatformDatum.find_by(user_id: @fullfiller.id)
 		@applicant.wallet-=params(:amount)
 		@fullfiller.wallet+=params(:amount)
 		@applicant.save
 		@fullfiller.save
-		@ad=Ad.find(params(:ad_id))
+		@ad=Ad.find(params(:id))
+		@transaction.ad=@ad
 		@ad.closed=true
 		@ad.save
-		@transaction=Transaction.new(transaction_params)
+		@transaction.amount=params[:amount]
 		@transaction.save
 		redirect_to :back
 	end
   end
 
   def destroy
-	check_auth(3)
 	#Ritrova gli utenti
-	@applicant=User.find_by(nickname: @transaction.from)
+	@applicant=@transaction.from
 	@applicant=UserPlatformDatum.find_by(user_id: @applicant.id)
-	@fullfiller=User.find_by(nickname: @transaction.to)
+	@fullfiller=@transaction.to
 	@fullfiller=UserPlatformDatum.find_by(user_id: @fullfiller.id)
 
 	#Ripristina lo stato precedente
@@ -60,7 +64,7 @@ class TransactionsController < ApplicationController
 	@fullfiller.save
 
 	#Riapre l'annuncio
-	@ad=Ad.find(@transaction.ad_id)
+	@ad=@transaction.ad
 	@ad.closed=false
 	@ad.save
 
@@ -75,6 +79,6 @@ class TransactionsController < ApplicationController
     end
 
     def transaction_params
-      params.require(:transaction).permit(:ad_id, :from, :to, :amount)
+      params.require(:transaction).permit(:ad, :from, :to, :amount)
     end
 end

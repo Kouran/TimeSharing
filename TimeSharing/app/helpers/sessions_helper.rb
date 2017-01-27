@@ -44,4 +44,9 @@ module SessionsHelper
 		return true
 	end
 
+	def is_mod?
+		unless check_auth(2) then redirect_to "/" and return false end
+		return true
+	end
+
 end

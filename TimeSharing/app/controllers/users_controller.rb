@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
 	include SessionsHelper
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+	before_action :set_user, only: [:show, :edit, :update, :destroy]
+	before_action :is_admin?, only: [:nick_destroy]
+	before_action :logged_in?, only: [:edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -48,14 +50,14 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-	if not current_user==params[:id] then check_auth(3) end
+	if not current_user==params[:id] or check_auth(3) then redirect_to @user end
 	@user.update(user_params)
   end
 
   # DELETE /users/1
   def destroy
-	if not current_user==params[:id] then check_auth(3) end
-	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
+	if not current_user==params[:id] or check_auth(3) then redirect_to @user end
+	@userplatformdata=user.plat
 	@personaldata=PersonalDatum.find_by(user_id: @user.id)
 	@userplatformdata.destroy
 	@personaldata.destroy
@@ -63,7 +65,6 @@ class UsersController < ApplicationController
   end
 
   def nick_destroy
-	check_auth(3)
 	@user=User.find_by(nickname: params[:nick])
 	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
 	@personaldata=PersonalDatum.find_by(user_id: @user.id)

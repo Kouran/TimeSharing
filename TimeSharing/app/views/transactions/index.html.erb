@@ -12,9 +12,9 @@
  
 	<% @transactions.each do |transaction| %>
 		<tr>
-			<td><%= link_to "Ad", "/ads/@{transaction.ad}" %> </td>
-			<td><%= transaction.applicant %></td>
-			<td><%= transaction.fullfiller %></td>
+			<td><%= link_to "Ad", "/ads/@{transaction.ad.id}" %> </td>
+			<td><%= transaction.applicant.nickname %></td>
+			<td><%= transaction.fullfiller.nickname %></td>
 			<td><%= transaction.amount %></td>
 			<td><%= link_to "Report an Abuse", "/messages/admin_report" %> </td>
 			<%= if @admin==1 %><td><%= link_to "Cancel", "/transactions/destroy", method: :delete %>
