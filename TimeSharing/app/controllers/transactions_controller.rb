@@ -22,12 +22,9 @@ class TransactionsController < ApplicationController
   end
 
   def create
-	if not User.exists?(nickname: params(:to))
-		:notice="User not found. Try again"
-	elsif UserPlatformDatum.find_by(user_id: User.find_by(nickname: params(:from)).id).amount<params(:amount)
-		:notice="You have not enough hours to complete this transaction"
-	elsif params(:amount)<0
-		:notice="Hours must be not negative"
+	if not User.exists?(nickname: params(:to)) then redirect_to "/" and return
+	elsif UserPlatformDatum.find_by(user_id: User.find_by(nickname: params(:from)).id).amount<params(:amount) then redirect_to "/" and return
+	elsif params(:amount)<0 then redirect_to "/" and return
 	else			
 		@transaction=Transaction.new
 		@applicant=User.find(current_user)
@@ -46,7 +43,7 @@ class TransactionsController < ApplicationController
 		@ad.save
 		@transaction.amount=params[:amount]
 		@transaction.save
-		redirect_to :back
+		redirect_to @transaction
 	end
   end
 
