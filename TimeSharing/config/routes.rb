@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 	root 'welcome#home'
 	get "welcome/homepage" => "welcome#homepage"
-    get "welcome/result" => "ads#result"
+    	get "welcome/result" => "ads#result"
 	#messages/index.html.erb 
 	get "messages" => "messages#index"
 	
@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 	get "Ads/Result" => "ads#result"
 	get "Ads/My" => "ads#my"
 	get "Ads/New" => "ads#new"
+	#route per contatti
+	get "welcome/contatti" => "welcome#contatti"
 	
 
 	#Aggiungere una route per creare le transazioni
