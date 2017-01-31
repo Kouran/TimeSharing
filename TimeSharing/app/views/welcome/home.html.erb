@@ -14,8 +14,15 @@
 	<div id="wrapper" align="center">
 		<!-- shell -->
 		<div class="shell">
+			
 			<!-- container -->
-			<div class="container">		
+			<div class="container">
+				<div class="wrapper" align="right">
+					<% if current_user.present? %>
+						<p>Hi, <%= current_user.nickname %></p>
+					<% end %>		
+			</div>
+				
 				<!-- header -->
 				<header class="header">
 				
@@ -56,13 +63,14 @@
 							<li>
 								<a href="/users/new">Registrati<span></span></a>
 							</li>
+							
 						</ul>
 					</nav>
 					<div class="cl">&nbsp;</div>
 				</header>
 				<!-- end of header -->
 				<p> 
-					<% if not current_user%>
+					<% if not current_user %>
 						<%= flash[:notice] %>
 					<% end %>
 				</p>

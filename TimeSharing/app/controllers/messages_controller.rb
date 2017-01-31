@@ -10,12 +10,9 @@ class MessagesController < ApplicationController
   def index
 		#@messages= Message.find_by(sender: current_user)
 		@user=User.find(current_user).nickname
-    	@messages = Message.where("sender= '%s' or receiver= '%s'",  @user, @user )
-		@messages=Message.all
+		@messages = Message.where("sender = ? OR receiver = ? ", @user, @user) 
 		if params[:search]
-			@messages=Message.search(params[:search]).order("created_at DESC")
-		else
-			@messages = Message.all.order("created_at DESC") 
+			@messages=Message.search(params[:search]).order("created_at DESC") 
 		end
 	end
 
@@ -27,7 +24,7 @@ class MessagesController < ApplicationController
 
   # GET /messages/new
   def new
-    @message = Message.new
+    #@message = Message.new 	
   end
 
   # GET /messages/1/edit
@@ -38,6 +35,7 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(message_params)
+	@message.save
     respond_to do |format|
       if @message.save
         format.html { redirect_to @message, notice: 'Message was successfully created.' }

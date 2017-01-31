@@ -21,6 +21,7 @@ class UserPlatformDataController < ApplicationController
 	@data.wallet+=params[:amount]
 	@data.save
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

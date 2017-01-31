@@ -1,9 +1,9 @@
 class AdsController < ApplicationController
 
-	include SessionsHelper
-
+  include SessionsHelper
+	
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in?, only: [:my] 
   respond_to :html
 
 def search
@@ -19,8 +19,9 @@ def result
 end
 
 def my
-    @ads = Ad.where("applicant_user LIKE ?", "%#{current_user}%")
-
+    #@ads = Ad.where("applicant_user LIKE ?", "%#{current_user}%")
+	redirect_to action: "index"
+	
 end
 
 
@@ -28,12 +29,12 @@ end
 
   def index
     @ads = Ad.all
-    respond_with(@ads)
+    #respond_with(@ads)
   end
 
   def show
-      @applicant=User.find_by(nickname: @ad.applicant_user).id
-    respond_with(@ad)
+    #  @applicant=User.find_by(nickname: @ad.applicant_user).id
+    #respond_with(@ad)
   end
 
   def new

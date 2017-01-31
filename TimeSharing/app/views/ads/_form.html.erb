@@ -44,8 +44,7 @@
     <%= f.check_box :closed %>
   </div>
   <div class="field">
-    <%= f.label :applicant_user %><br>
-    <%= f.text_field :applicant_user %>
+	<%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
   </div>
   <div class="field">
     <%= f.label :fullfiller_user %><br>

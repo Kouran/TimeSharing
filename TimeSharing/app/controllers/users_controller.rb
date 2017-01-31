@@ -30,8 +30,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-      if @user.save
-	log_in @user
 	@user_platform_datum=UserPlatformDatum.create(:user => @user)
 	@user_platform_datum.access=1
 	@user_platform_datum.fullfilling_rating=0
@@ -40,6 +38,10 @@ class UsersController < ApplicationController
 	@user_platform_datum.wallet=2
 	@user_platform_datum.save
 	@user.plat=@user_platform_datum
+      if @user.save
+	log_in @user
+	
+	
 	flash[:success]="Welcome to TimeSharing!"
 	redirect_to @user
       else
@@ -56,8 +58,8 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-	if not current_user==params[:id] or check_auth(3) then redirect_to @user end
-	@userplatformdata=user.plat
+	if not current_user==params[:id] or check_auth(3) then redirect_to @user end		
+	@userplatformdata=@user.plat_id
 	@personaldata=PersonalDatum.find_by(user_id: @user.id)
 	@userplatformdata.destroy
 	@personaldata.destroy
