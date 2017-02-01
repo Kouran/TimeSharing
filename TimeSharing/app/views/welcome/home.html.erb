@@ -38,10 +38,7 @@
 									<li><a href="/ads">Tutti gli annunci</a></li>
 								</ul>
 							</li>
-							<li>
-								<%= link_to "Profilo", "/users/#{current_user.id}" %>
-								
-							</li>
+							
 							<li><a>Messaggi</a>
 							<ul>
 									<li><a href="/messages/new">Nuovo messaggio</a></li>
@@ -65,7 +62,14 @@
 								<% end%>
 							</li>
 							<li>
+								<% if current_user %>
+								<%= link_to "Profilo", "/users/#{current_user.id}" %>
+								<% end %>
+							</li>
+							<li>
+								<% if not current_user %>
 								<a href="/users/new">Registrati<span></span></a>
+								<% end %>
 							</li>
 							
 						</ul>
