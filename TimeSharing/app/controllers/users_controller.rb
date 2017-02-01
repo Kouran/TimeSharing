@@ -32,9 +32,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 	@user_platform_datum=UserPlatformDatum.create(:user => @user)
 	@user_platform_datum.access=1
-	@user_platform_datum.fullfilling_rating=0
-	@user_platform_datum.applying_rating=0
-	@user_platform_datum.total_rating=0
 	@user_platform_datum.wallet=2
 	@user_platform_datum.save
 	@user.plat=@user_platform_datum
@@ -52,18 +49,26 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-	if not current_user==params[:id] or check_auth(3) then redirect_to @user end
-	@user.update(user_params)
+	if not current_user==@user or check_auth(3) then redirect_to "/unauthorized" and return end
+	if @user.update(user_params)
+		redirect_to @user
+	else
+		redirect_to :back
+	end
   end
 
   # DELETE /users/1
   def destroy
-	if not current_user==params[:id] or check_auth(3) then redirect_to @user end		
-	@userplatformdata=@user.plat_id
-	@personaldata=PersonalDatum.find_by(user_id: @user.id)
-	@userplatformdata.destroy
-	@personaldata.destroy
+	if not current_user==params[:id] or check_auth(3) then redirect_to "/unauthorized" and return end
+	if @user.plat		
+		@userplatformdata=@user.plat
+		@userplatformdata.destroy
+	end
+	if @personaldata=PersonalDatum.find_by(user_id: @user.id)
+		@personaldata.destroy
+	end
     @user.destroy
+	redirect_to "/users"
   end
 
   def nick_destroy

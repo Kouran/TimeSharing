@@ -1,11 +1,11 @@
-<%= form_for Message.new do |f| %>
+<%= form_for @message do |f| %>
       <ul>
       <% @message.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
-  <% end %>
+  
 
   <div class="field">
 	

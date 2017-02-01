@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
 
   # GET /messages/new
   def new
-    #@message = Message.new 	
+    @message = Message.new 	
   end
 
   # GET /messages/1/edit
@@ -81,7 +81,7 @@ class MessagesController < ApplicationController
 	private
     # Use callbacks to share common setup or constraints between actions.
     def set_message
-		@message= Message.find_by(params[:current_user])  
+		@message= Message.find(params[:id])  
     	#@message = Message.find(params[:id])
   
 	end
