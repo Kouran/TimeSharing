@@ -13,6 +13,48 @@
   <strong>Registration Date:</strong>
   <%= @user.created_at %>
 </p>
+<p>
+  <strong>User:</strong>
+  <%= @user.nickname %>
+</p>
+<% if @personal_datum %>
+<p>
+  <strong>Name:</strong>
+  <%= @personal_datum.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @personal_datum.surname %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @personal_datum.date_of_birth %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @personal_datum.city %>
+</p>
+
+<p>
+  <strong>Actual job:</strong>
+  <%= @personal_datum.actual_job %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @personal_datum.phone %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @personal_datum.skills %>
+</p>
+<% end %>
 <%= link_to 'Edit your personal data', '/personal_data/new' %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
 	@user=User.find(params[:id])
+	@personal_datum = PersonalDatum.find_by(user_id: @user.id)
   end
 
   # GET /users/new
