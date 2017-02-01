@@ -4,6 +4,7 @@ class AdsController < ApplicationController
 
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: [:my]
+  before_action :is_mod?, only: [:param_delete]
   respond_to :html
 
 def search
@@ -42,7 +43,6 @@ end
   def new
     @ad = Ad.new
     respond_with(@ad)
-    @ad.applicant_user = current_user;
   end
 
   def edit
@@ -52,7 +52,6 @@ end
       @ad = Ad.new(ad_params)
       @ad.save
 
-  	 @ad.applicant_user = current_user;
      respond_with(@ad)
   end
 
@@ -68,9 +67,9 @@ end
   end
 
   def param_delete
-	check_auth(2)
 	@ad = Ad.find_by(id: params[:id])
 	@ad.destroy
+    redirect_to "/ads" and return
   end
 
   private

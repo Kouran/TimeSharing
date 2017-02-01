@@ -1,5 +1,7 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <p class="titolo">Transactions</p>
- 
+
 <table>
 	<tr>
 		<th>Ad</th>
@@ -9,15 +11,15 @@
 		<th>Report an abuse</th>
 		<% if @admin==1 %><th>Cancel Transaction</th><% end %>
 	</tr>
- 
+
 	<% @transactions.each do |transaction| %>
 		<tr>
 			<td><%= link_to "Ad", "/ads/@{transaction.ad.id}" %> </td>
-			<td><%= transaction.applicant.nickname %></td>
-			<td><%= transaction.fullfiller.nickname %></td>
+			<td><%= transaction.from.nickname %></td>
+			<td><%= transaction.to.nickname %></td>
 			<td><%= transaction.amount %></td>
 			<td><%= link_to "Report an Abuse", "/messages/admin_report" %> </td>
-			<% if @admin==1 %><td><%= link_to "Cancel", "/transactions/destroy", method: :delete %><% end %>
+			<% if @admin==1 %><td><%= link_to "Cancel", "/transactions/#{transaction.id}", method: :delete %><% end %>
 		</tr>
 	<% end %>
 </table>

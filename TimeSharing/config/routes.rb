@@ -14,18 +14,18 @@ Rails.application.routes.draw do
 	root 'welcome#home'
 	get "welcome/homepage" => "welcome#homepage"
     	get "welcome/result" => "ads#result"
-	#messages/index.html.erb 
+	#messages/index.html.erb
 	get "messages" => "messages#index"
     get "/messages/new/:to" => "messages#new"
-	
+
 	#aggiungere queste routes
 	get "/admin_report" => "messages#admin_report"		#Invia messaggi a Admin
-	
+
 	#get "/messages/mod_report" => "messages#reportToMod"		Invia messaggi a Mod
 	get "/adminmessages" => "messages#admin"
-	#get "/messages/mod" => "messages#modShow"				Visualizza messaggi a Mod
+	#get "/modmessages" => "messages#modShow"				Visualizza messaggi a Mod
 	#get "/messages/search" => "messages#searchForAdmin"				Ricerca Messaggi per l'Admin
-	
+
 	#route per la registrazione
 	get "/signup" => "users#new"
 	post "/signup" => "users#create"
@@ -40,10 +40,11 @@ Rails.application.routes.draw do
 	get "Ads/New" => "ads#new"
 	#route per contatti
 	get "welcome/contatti" => "welcome#contatti"
-	
+
 
 	#Aggiungere una route per creare le transazioni
-	delete "Ads/:id" => "transactions#new"
+	post "Ads/close/:id" => "transactions#new"
+    post "/transactions/create" => "transactions#new"
 
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"

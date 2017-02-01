@@ -1,14 +1,27 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <p class="titolo">Close this Ad</p>
-<p id="notice" color="red"><%= notice %></p>
-<form action="crea" method="post">
 
-	<%= hidden_field_tag "id", params[:id] %>
 
-	<%= text_field_label "Fullfiller" =>
-	<%= text_field_tag "to" %>
-	
-	<%= number_field_label "Hours =>
-	<%= number_field_tag "amount", nil, min: 0 %>
+<%= form_for @transaction do |f| %>
 
-	<%= submit_tag "Close" %>
-</form>
+
+
+  <div class="field">
+
+    <%= f.hidden_field(:from, :value => current_user.nickname) %>
+	<%= f.hidden_field(:ad, :value => params[:id]) %>
+  </div>
+  <div class="field">
+
+    <%= f.label :to %><br>
+	<%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,12 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <h1>Listing messages</h1>
-	
+<%= form_tag(messages_path, :method => 'get', id: "search-form") do %>
+          <p>
+              <%= text_field_tag :search, params[:search], placeholder: "Search Messages" %>
+              <%= submit_tag "Search" %>
+          </p>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -7,12 +14,12 @@
       <th>Receiver</th>
       <th>Title</th>
       <th>Body</th>
-      <th colspan="3"></th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
-	
+
    		<% @messages.each do |message| %>
       <tr>
         <td><%= message.sender %></td>
@@ -20,24 +27,12 @@
         <td><%= message.title %></td>
         <td><%= message.body %></td>
         <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     	<% end %>
-	
-  </tbody>
 
-  <%= form_tag(messages_path, :method => 'get', id: "search-form") do %>
-			<p>
-				<%= text_field_tag :search, params[:search], placeholder: "Search Messages" %>
-				<%= submit_tag "Search" %>
-			</p>
-  <% end %>
+  </tbody>
 </table>
+
 <%= link_to 'New Message', new_message_path %>
 <%= link_to 'Report', "/admin_report"  %>
 <%= link_to 'Back', "/"  %>
-
-
-
-

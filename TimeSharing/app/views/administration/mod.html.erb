@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <body>
 <p class='title'>Moderation Page</p>
 <br>
@@ -5,7 +7,8 @@
 <br>
 <p class='important'>Delete Ad</p>
 <br>
-<form action="/ads/delete" method="delete">
+<form action="/ads/delete" method="post">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 	ID Annuncio: <%= text_field_tag "id" %>
 	<br>
 	<%= submit_tag("Delete Ad") %>
@@ -13,9 +16,9 @@
 <br>
 <hr>
 <br>
-<button action="/transactions">See Transactions</button>
+<a href="/transactions">See Transactions</a>
 <br>
 <hr>
 <br>
-<button action="/messages/mod">See received reports</button>
+<a href="/modmessages">See received reports</a>
 </body>

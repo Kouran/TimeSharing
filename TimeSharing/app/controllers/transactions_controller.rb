@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-	
+
 	include SessionsHelper
 
 	before_action :logged_in?
@@ -22,29 +22,28 @@ class TransactionsController < ApplicationController
   end
 
   def create
-	if not User.exists?(nickname: params(:to)) then redirect_to "/" and return
-	elsif UserPlatformDatum.find_by(user_id: User.find_by(nickname: params(:from)).id).amount<params(:amount) then redirect_to "/" and return
-	elsif params(:amount)<0 then redirect_to "/" and return
-	else			
-		@transaction=Transaction.new
-		@applicant=User.find(current_user)
-		@transaction.from=@applicant
-		@applicant=UserPlatformDatum.find_by(user_id: @applicant.id)
-		@fullfiller=User.find_by(nickname: params(:to))
-		@transaction.to=@fullfiller
-		@fullfiller=UserPlatformDatum.find_by(user_id: @fullfiller.id)
-		@applicant.wallet-=params(:amount)
-		@fullfiller.wallet+=params(:amount)
-		@applicant.save
-		@fullfiller.save
-		@ad=Ad.find(params(:id))
-		@transaction.ad=@ad
-		@ad.closed=true
-		@ad.save
-		@transaction.amount=params[:amount]
-		@transaction.save
-		redirect_to @transaction
-	end
+	if not User.find_by(nickname: params[:transaction][:to]) then redirect_to "/" and return end
+	if UserPlatformDatum.find_by(user_id: current_user.id).wallet<params[:transaction][:amount].to_i then redirect_to "/" and return end
+	if params[:transaction][:amount].to_i<0 then redirect_to "/" and return end
+	@transaction=Transaction.new
+	@applicant=current_user
+	@transaction.from=@applicant
+	@applicant=UserPlatformDatum.find_by(user_id: @applicant.id)
+	@fullfiller=User.find_by(nickname: params[:transaction][:to])
+	@transaction.to=@fullfiller
+	@fullfiller=UserPlatformDatum.find_by(user_id: @fullfiller.id)
+	@applicant.wallet-=params[:transaction][:amount].to_i
+	@fullfiller.wallet+=params[:transaction][:amount].to_i
+	@applicant.save
+	@fullfiller.save
+	@ad=Ad.find(params[:transaction][:ad])
+	@transaction.ad=@ad
+	@ad.fullfiller_user=params[:transaction][:to]
+	@ad.closed=true
+	@ad.save
+	@transaction.amount=params[:transaction][:amount].to_i
+	@transaction.save
+	redirect_to "/ads"
   end
 
   def destroy
@@ -62,8 +61,10 @@ class TransactionsController < ApplicationController
 
 	#Riapre l'annuncio
 	@ad=@transaction.ad
-	@ad.closed=false
-	@ad.save
+	if @ad
+		@ad.closed=false
+		@ad.save
+	end
 
 	#Elimina la transazione
 	@transaction.delete

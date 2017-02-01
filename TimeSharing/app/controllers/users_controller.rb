@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 	include SessionsHelper
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
-	before_action :is_admin?, only: [:nick_destroy]
+	before_action :is_admin?, only: [:nick_destroy, :index]
 	before_action :logged_in?, only: [:edit, :update, :destroy]
 
   # GET /users
@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def show
 	@user=User.find(params[:id])
 	@personal_datum = PersonalDatum.find_by(user_id: @user.id)
+	@userplatformdatum = @user.plat
   end
 
   # GET /users/new
@@ -38,8 +39,8 @@ class UsersController < ApplicationController
 	@user.plat=@user_platform_datum
       if @user.save
 	log_in @user
-	
-	
+
+
 	flash[:success]="Welcome to TimeSharing!"
 	redirect_to @user
       else
@@ -61,7 +62,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
 	if not current_user==params[:id] or check_auth(3) then redirect_to "/unauthorized" and return end
-	if @user.plat		
+	if @user.plat
 		@userplatformdata=@user.plat
 		@userplatformdata.destroy
 	end
@@ -80,7 +81,7 @@ class UsersController < ApplicationController
 	@personaldata.destroy
     @user.destroy
   end
-		
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

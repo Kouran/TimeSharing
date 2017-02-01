@@ -26,10 +26,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :zone %><br>
-    <%= f.text_area :zone %>
-  </div>
-  <div class="field">
     <%= f.label :expected_hours %><br>
     <%= f.text_field :expected_hours %>
   </div>
@@ -41,10 +37,7 @@
     <%= f.label :request %><br>
     <%= f.check_box :request %>
   </div>
-  <div class="field">
-    <%= f.label :closed %><br>
-    <%= f.check_box :closed %>
-  </div>
+  <%= f.hidden_field(:closed, :value => false) %>
   <%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
 
   <div class="actions">

@@ -1,5 +1,7 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <h1>Listing report</h1>
-	
+
 <table>
   <thead>
     <tr>
@@ -11,7 +13,7 @@
   </thead>
 
   <tbody>
-	
+
    		<% @messages.each do |message| %>
       <tr>
         <td><%= message.sender %></td>
@@ -21,7 +23,7 @@
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     	<% end %>
-	
+
   </tbody>
 </table>
 

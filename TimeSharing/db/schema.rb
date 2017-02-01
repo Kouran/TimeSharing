@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20170109151632) do
     t.string   "title"
     t.string   "category"
     t.text     "description"
-    t.text     "zone"
     t.float    "expected_hours"
     t.date     "deadline"
     t.boolean  "request"
@@ -83,6 +82,6 @@ ActiveRecord::Schema.define(version: 20170109151632) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
 
-	
+
 
 end
