@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     	get "welcome/result" => "ads#result"
 	#messages/index.html.erb 
 	get "messages" => "messages#index"
+  get "/messages/new/:to" => "messages#new"
 	
 	#aggiungere queste routes
 	get "/admin_report" => "messages#admin_report"		#Invia messaggi a Admin

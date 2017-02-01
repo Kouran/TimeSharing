@@ -12,9 +12,10 @@
     <%= f.hidden_field(:sender, :value => current_user.nickname) %>
   </div>
   <div class="field">
+
     <%= f.label :receiver %><br>
 	
-    <%= f.text_field :receiver %>
+    <%= f.text_field :receiver, :value => params[:to] %>
   </div>
   <div class="field">
     <%= f.label :title %><br>

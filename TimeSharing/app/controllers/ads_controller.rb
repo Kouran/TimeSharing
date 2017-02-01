@@ -16,6 +16,7 @@ def result
     parametro4=params[:search4]
 
     @ads = Ad.where("title LIKE ? and category LIKE ? and description LIKE ? and applicant_user LIKE ?", "%#{parametro1}%", "%#{parametro2}%", "%#{parametro3}%", "%#{parametro4}%").order("created_at DESC")
+    render "index"
 end
 
 def my

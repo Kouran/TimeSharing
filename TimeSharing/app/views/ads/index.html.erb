@@ -32,8 +32,11 @@
         <td><%= ad.applicant_user %></td>
         <td><%= ad.fullfiller_user %></td>
         <td><%= link_to 'Show', ad %></td>
+        <td><%= link_to 'Accept', "/messages/new/#{ad.applicant_user}" %></td>
+        <% if current_user.nickname == ad.applicant_user or check_auth(2) %>
         <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
         <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
