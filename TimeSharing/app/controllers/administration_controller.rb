@@ -3,15 +3,11 @@ class AdministrationController < ApplicationController
 	include SessionsHelper
 
 	def admin
-		check_auth(3)
+		if not check_auth(3) then redirect_to "/unauthorized" and return end
 	end
 
 	def mod
-		check_auth(2)
-	end
-
-
-	def notlogged
+		if not check_auth(2) then redirect_to "/unauthorized" and return end
 	end
 
 	def unauthorized

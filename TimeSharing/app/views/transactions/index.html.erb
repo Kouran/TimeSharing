@@ -7,7 +7,7 @@
 		<th>Fullfiller</th>
 		<th>Amount</th>
 		<th>Report an abuse</th>
-		<%= if @admin==1 %><th>Cancel Transaction</th><% end %>
+		<% if @admin==1 %><th>Cancel Transaction</th><% end %>
 	</tr>
  
 	<% @transactions.each do |transaction| %>
@@ -17,7 +17,7 @@
 			<td><%= transaction.fullfiller.nickname %></td>
 			<td><%= transaction.amount %></td>
 			<td><%= link_to "Report an Abuse", "/messages/admin_report" %> </td>
-			<%= if @admin==1 %><td><%= link_to "Cancel", "/transactions/destroy", method: :delete %>
+			<% if @admin==1 %><td><%= link_to "Cancel", "/transactions/destroy", method: :delete %><% end %>
 		</tr>
 	<% end %>
 </table>

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     	get "welcome/result" => "ads#result"
 	#messages/index.html.erb 
 	get "messages" => "messages#index"
-  get "/messages/new/:to" => "messages#new"
+    get "/messages/new/:to" => "messages#new"
 	
 	#aggiungere queste routes
 	get "/admin_report" => "messages#admin_report"		#Invia messaggi a Admin
@@ -48,11 +48,10 @@ Rails.application.routes.draw do
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
 	get "/mod" => "administration#mod"
-	put "/user_platform_data/permission" => "user_platform_data#permission"
-	put "/user_platform_data/wallet" => "user_platform_data#wallet"
-	delete "/users/nick_destroy" => "users#nick_destroy"
-	delete "/ads/delete" => "ads#param_delete"
-	get "/notlogged" => "administration#notlogged"
+	post "/user_platform_data/permission" => "user_platform_data#permission"
+	post "/administration/wallet" => "user_platform_data#wallet"
+	post "/users/nick_destroy" => "users#nick_destroy"
+	post "/ads/delete" => "ads#param_delete"
 	get "/unauthorized" => "administration#unauthorized"
 
 
