@@ -1,9 +1,9 @@
 class AdsController < ApplicationController
 
   include SessionsHelper
-	
+
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in?, only: [:my] 
+  before_action :logged_in?, only: [:my]
   respond_to :html
 
 def search
@@ -21,7 +21,7 @@ end
 def my
     #@ads = Ad.where("applicant_user LIKE ?", "%#{current_user}%")
 	redirect_to action: "index"
-	
+
 end
 
 
@@ -40,15 +40,18 @@ end
   def new
     @ad = Ad.new
     respond_with(@ad)
+    @ad.applicant_user = current_user;
   end
 
   def edit
   end
 
   def create
-    @ad = Ad.new(ad_params)
-    @ad.save
-    respond_with(@ad)
+      @ad = Ad.new(ad_params)
+      @ad.save
+
+  	 @ad.applicant_user = current_user;
+     respond_with(@ad)
   end
 
   def update
@@ -57,9 +60,9 @@ end
   end
 
   def destroy
-	if not current_user==params[:id] then check_auth(2) end
-    @ad.destroy
-    respond_with(@ad)
+      if not current_user.nickname==Ad.find(params[:id]).applicant_user or check_auth(2) then redirect_to "/unauthorized"  and return end
+      @ad.destroy
+      redirect_to "/ads" and return
   end
 
   def param_delete

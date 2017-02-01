@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
 <%= form_for(@ad) do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
@@ -43,13 +45,8 @@
     <%= f.label :closed %><br>
     <%= f.check_box :closed %>
   </div>
-  <div class="field">
-	<%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
-  </div>
-  <div class="field">
-    <%= f.label :fullfiller_user %><br>
-    <%= f.text_field :fullfiller_user %>
-  </div>
+  <%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
