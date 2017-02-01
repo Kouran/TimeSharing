@@ -58,7 +58,11 @@
 								</ul>
 							</li>
 							<li>
+								<% if not current_user %>
 								<a href="/login">Login<span></span></a>
+								<% else%>
+								<%= link_to "Logout", "/logout" , method: :delete %>
+								<% end%>
 							</li>
 							<li>
 								<a href="/users/new">Registrati<span></span></a>
