@@ -19,8 +19,9 @@ def result
 end
 
 def my
-    #@ads = Ad.where("applicant_user LIKE ?", "%#{current_user}%")
-	redirect_to action: "index"
+
+    @ads = Ad.where("applicant_user LIKE ?", "%#{current_user.nickname}%")
+	render "index"
 
 end
 
