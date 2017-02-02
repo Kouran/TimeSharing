@@ -21,11 +21,6 @@ RSpec.describe Ad, :type=> :model do
 			ad.description=nil
 			expect(ad).to_not be_valid
 		end
-		it "is not valid without a zone" do
-			ad=build(:ad)
-			ad.zone=nil
-			expect(ad).to_not be_valid
-		end
 		it "is not valid without expected hours" do
 			ad=build(:ad)
 			ad.expected_hours=nil

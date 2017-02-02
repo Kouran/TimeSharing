@@ -14,9 +14,9 @@
 
 	<% @transactions.each do |transaction| %>
 		<tr>
-			<td><%= link_to "Ad", "/ads/@{transaction.ad.id}" %> </td>
-			<td><%= transaction.from.nickname %></td>
-			<td><%= transaction.to.nickname %></td>
+			<td><%= link_to "Ad", "/ads/#{transaction.ad_id}" %> </td>
+			<td><%= link_to "#{transaction.from.nickname}", "/users/#{transaction.from.id}" %></td>
+			<td><%= link_to "#{transaction.to.nickname}", "/users/#{transaction.to.id}" %></td>
 			<td><%= transaction.amount %></td>
 			<td><%= link_to "Report an Abuse", "/messages/admin_report" %> </td>
 			<% if @admin==1 %><td><%= link_to "Cancel", "/transactions/#{transaction.id}", method: :delete %><% end %>

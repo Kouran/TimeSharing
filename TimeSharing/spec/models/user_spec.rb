@@ -32,15 +32,13 @@ RSpec.describe User, :type=> :model do
 			expect(user).to_not be_valid
 		end
 		it "has an unique email" do
-			user=build(:user)
-			user.save
+			user=create(:user)
 			user2=build(:user)
 			user2.nickname="else"
 			expect{user2.save!}.to raise_error(ActiveRecord::RecordInvalid)
 		end
 		it "has an unique nickname" do
-			user=build(:user)
-			user.save
+			user=create(:user)
 			user2=build(:user)
 			user2.email="else@mail.com"
 			expect{user2.save!}.to raise_error(ActiveRecord::RecordInvalid)

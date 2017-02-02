@@ -4,7 +4,7 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		nickname "nickname"
-		association :plat, factory: :user_data, strategy: :build
+		association :plat, factory: :user_data
 	end
 
 	factory :user2, class: User do
@@ -12,7 +12,7 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		nickname "else"
-		association :plat, factory: :user_data, strategy: :build
+		association :plat, factory: :user_data
 	end
 
 	factory :mod, class: User do
@@ -20,7 +20,7 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		nickname "nickname"
-		association :plat, factory: :mod_data, strategy: :build
+		association :plat, factory: :mod_data
 	end
 
 	factory :admin, class: User do
@@ -28,6 +28,6 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		nickname "nickname"
-		association :plat, factory: :admin_data, strategy: :build
+		association :plat, factory: :admin_data
 	end
 end

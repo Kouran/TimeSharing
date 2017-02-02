@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
 
 	before_action :logged_in?
 	before_action :set_transaction, only: [:show, :destroy]
-	before_action :is_mod?, only: [:index]
+	before_action :is_mod?, only: [:index, :show]
 	before_action :is_admin?, only: [:destroy]
 
 
@@ -22,16 +22,16 @@ class TransactionsController < ApplicationController
   end
 
   def create
-	if not User.find_by(nickname: params[:transaction][:to]) then redirect_to "/" and return end
-	if UserPlatformDatum.find_by(user_id: current_user.id).wallet<params[:transaction][:amount].to_i then redirect_to "/" and return end
-	if params[:transaction][:amount].to_i<0 then redirect_to "/" and return end
+	if not User.find_by(nickname: params[:transaction][:to]) then redirect_to :back and return end
+	if UserPlatformDatum.find_by(user_id: current_user.id).wallet<params[:transaction][:amount].to_i then redirect_to :back and return end
+	if params[:transaction][:amount].to_i<0 then redirect_to :back and return end
 	@transaction=Transaction.new
 	@applicant=current_user
 	@transaction.from=@applicant
-	@applicant=UserPlatformDatum.find_by(user_id: @applicant.id)
+	@applicant=@applicant.plat
 	@fullfiller=User.find_by(nickname: params[:transaction][:to])
 	@transaction.to=@fullfiller
-	@fullfiller=UserPlatformDatum.find_by(user_id: @fullfiller.id)
+	@fullfiller=@fullfiller.plat
 	@applicant.wallet-=params[:transaction][:amount].to_i
 	@fullfiller.wallet+=params[:transaction][:amount].to_i
 	@applicant.save

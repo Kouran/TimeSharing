@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+	if not (current_user==@user or check_auth(3)) then redirect_to "/unauthorized" and return end
   end
 
   # POST /users
@@ -37,21 +38,19 @@ class UsersController < ApplicationController
 	@user_platform_datum.wallet=2
 	@user_platform_datum.save
 	@user.plat=@user_platform_datum
-      if @user.save
-	log_in @user
-
-
-	flash[:success]="Welcome to TimeSharing!"
-	redirect_to @user
-      else
-	flash[:danger]="Attention! Wrong data"
-	render "new"
+		if @user.save
+			log_in @user
+			flash[:success]="Welcome to TimeSharing!"
+			redirect_to @user
+		else
+			flash[:danger]="Attention! Wrong data"
+			render "new"
       end
   end
 
   # PATCH/PUT /users/1
   def update
-	if not current_user==@user or check_auth(3) then redirect_to "/unauthorized" and return end
+	if not (current_user==@user or check_auth(3)) then redirect_to "/unauthorized" and return end
 	if @user.update(user_params)
 		redirect_to @user
 	else
@@ -61,7 +60,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-	if not current_user==params[:id] or check_auth(3) then redirect_to "/unauthorized" and return end
+	if not (current_user==params[:id] or check_auth(3)) then redirect_to "/unauthorized" and return end
 	if @user.plat
 		@userplatformdata=@user.plat
 		@userplatformdata.destroy
@@ -75,11 +74,15 @@ class UsersController < ApplicationController
 
   def nick_destroy
 	@user=User.find_by(nickname: params[:nick])
-	@userplatformdata=UserPlatformDatum.find_by(user_id: @user.id)
-	@personaldata=PersonalDatum.find_by(user_id: @user.id)
-	@userplatformdata.destroy
-	@personaldata.destroy
+	if @user.plat
+		@userplatformdata=@user.plat
+		@userplatformdata.destroy
+	end
+	if @personaldata=PersonalDatum.find_by(user_id: @user.id)
+		@personaldata.destroy
+	end
     @user.destroy
+	redirect_to "/admin"
   end
 
 

@@ -12,10 +12,9 @@ module SessionsHelper
 
 	#Logged in boolean function
 	def logged_in?
-		if not current_user.present? then redirect_to "/" and return false
+		if not current_user.present? then redirect_to "/unauthorized" and return false
 		end
-		current_user.present? 
-				
+		return true
 	end
 
 	#Log out
@@ -40,12 +39,12 @@ module SessionsHelper
 
 	# controlla se è amministratore
 	def is_admin?
-		unless check_auth(3) then redirect_to "/" and return false end
+		unless check_auth(3) then redirect_to "/unauthorized" and return false end
 		return true
 	end
 
 	def is_mod?
-		unless check_auth(2) then redirect_to "/" and return false end
+		unless check_auth(2) then redirect_to "/unauthorized" and return false end
 		return true
 	end
 

@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170109151632) do
     t.text     "description"
     t.float    "expected_hours"
     t.date     "deadline"
-    t.boolean  "request"
     t.boolean  "closed"
     t.string   "applicant_user"
     t.string   "fullfiller_user"

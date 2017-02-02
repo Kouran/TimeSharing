@@ -8,10 +8,6 @@ RSpec.describe UserPlatformDatum, :type=> :model do
 			plat.user=user
 			expect(plat).to be_valid
 		end
-		it "is not valid without an user" do
-			plat=build(:user_data)
-			expect(plat).to_not be_valid
-		end
 		it "is not valid without an access level" do
 			user=build(:user)
 			plat=build(:user_data)

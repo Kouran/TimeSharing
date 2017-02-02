@@ -9,7 +9,6 @@
       <th>Description</th>
       <th>Expected hours</th>
       <th>Deadline</th>
-      <th>Request</th>
       <th>Closed</th>
       <th>Applicant user</th>
       <th>Fullfiller user</th>
@@ -25,13 +24,18 @@
         <td><%= ad.description %></td>
         <td><%= ad.expected_hours %></td>
         <td><%= ad.deadline %></td>
-        <td><%= ad.request %></td>
         <td><%= ad.closed %></td>
         <td><%= ad.applicant_user %></td>
         <td><%= ad.fullfiller_user %></td>
         <td><%= link_to 'Show', ad %></td>
+		<% if current_user.nickname == ad.applicant_user and not ad.closed==true %>
+		<td><%= link_to 'Close', "/Ads/close/#{ad.id}", method: :post %>
+		<% elsif not current_user.nickname == ad.applicant_user %>
         <td><%= link_to 'Accept', "/messages/new/#{ad.applicant_user}" %></td>
-        <% if current_user.nickname == ad.applicant_user or check_auth(2) %>
+		<% else %>
+		<td>
+		<% end %>
+        <% if (current_user.nickname == ad.applicant_user and not ad.closed==true) or check_auth(2) %>
         <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
         <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% else %>

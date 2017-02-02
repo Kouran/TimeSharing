@@ -46,6 +46,7 @@ end
   end
 
   def edit
+	if not (current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2) then redirect_to "/unauthorized"  and return end
   end
 
   def create
@@ -61,7 +62,7 @@ end
   end
 
   def destroy
-      if not current_user.nickname==Ad.find(params[:id]).applicant_user or check_auth(2) then redirect_to "/unauthorized"  and return end
+      if not (current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2) then redirect_to "/unauthorized"  and return end
       @ad.destroy
       redirect_to "/ads" and return
   end
@@ -78,6 +79,6 @@ end
     end
 
     def ad_params
-      params.require(:ad).permit(:title, :category, :description, :zone, :expected_hours, :deadline, :request, :closed, :applicant_user, :fullfiller_user)
+      params.require(:ad).permit(:title, :category, :description, :expected_hours, :deadline, :closed, :applicant_user, :fullfiller_user)
     end
 end

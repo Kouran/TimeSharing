@@ -33,10 +33,6 @@
     <%= f.label :deadline %><br>
     <%= f.date_select :deadline %>
   </div>
-  <div class="field">
-    <%= f.label :request %><br>
-    <%= f.check_box :request %>
-  </div>
   <%= f.hidden_field(:closed, :value => false) %>
   <%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
 

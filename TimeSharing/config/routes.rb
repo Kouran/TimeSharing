@@ -44,7 +44,7 @@ Rails.application.routes.draw do
 
 	#Aggiungere una route per creare le transazioni
 	post "Ads/close/:id" => "transactions#new"
-    post "/transactions/create" => "transactions#new"
+    #post "/transactions/create" => "transactions#new"
 
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
