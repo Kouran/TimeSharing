@@ -16,10 +16,18 @@
   <div class="field">
 
     <%= f.hidden_field(:sender, :value => current_user.nickname) %>
+  
   </div>
+  
   <div class="field">
-    <%= f.hidden_field(:receiver, :value => "Admin") %>
-	</div>
+	
+    <%= f.label :receiver %><br>
+	<%= f.label :receiver, "Admin", :value => "admin" %>
+	<%= f.radio_button :receiver, "admin" %>
+	<%= f.label :receiver, "Mod", :value => "mod" %>
+	<%= f.radio_button :receiver, "mod" %>
+	
+  </div> <br>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

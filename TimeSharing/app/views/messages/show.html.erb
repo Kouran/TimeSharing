@@ -26,5 +26,6 @@
 
 <%= link_to 'Back', '/messages' %>
 <% if @message.receiver == current_user.nickname %>
-<%= link_to 'Reply', "/messages/new/#{@message.sender}" %>
+<%= link_to 'Reply', new_message_path(:sender => @message.receiver, :receiver => @message.sender)  %>
 <% end %>
+

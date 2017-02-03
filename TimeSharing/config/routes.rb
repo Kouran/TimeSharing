@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :user_platform_data
 
   resources :personal_data
@@ -16,13 +15,12 @@ Rails.application.routes.draw do
     	get "welcome/result" => "ads#result"
 	#messages/index.html.erb
 	get "messages" => "messages#index"
-    get "/messages/new/:to" => "messages#new"
-
 	#aggiungere queste routes
 	get "/admin_report" => "messages#admin_report"		#Invia messaggi a Admin
 
 	#get "/messages/mod_report" => "messages#reportToMod"		Invia messaggi a Mod
 	get "/adminmessages" => "messages#admin"
+	get "/modmessages" => "messages#mod"
 	#get "/modmessages" => "messages#modShow"				Visualizza messaggi a Mod
 	#get "/messages/search" => "messages#searchForAdmin"				Ricerca Messaggi per l'Admin
 
@@ -44,7 +42,7 @@ Rails.application.routes.draw do
 
 	#Aggiungere una route per creare le transazioni
 	post "Ads/close/:id" => "transactions#new"
-    #post "/transactions/create" => "transactions#new"
+    post "/transactions/create" => "transactions#new"
 
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"

@@ -70,15 +70,24 @@ class MessagesController < ApplicationController
       format.json { head :no_content }
     end
   end
-	def admin_report
-		redirect_to "/messages/new/admin"	
-	#@message = Message.new
+	def admin_report	
+		@message = Message.new
+		if @message.receiver == "admin" then
+			@message = Message.new(adm_message_params)
+		end
+		if @message.receiver == mod then 
+			@message = Message.new(mod_message_params)
+		end
+
     end
 
 	def admin
-		@messages = Message.where(receiver: "Admin")
+		@messages = Message.where(receiver: "admin")
 	end
-  
+  	
+	def mod
+		@messages = Message.where(receiver: "mod")
+	end
 	private
     # Use callbacks to share common setup or constraints between actions.
     def set_message
@@ -89,11 +98,13 @@ class MessagesController < ApplicationController
     def message_params
       params.require(:message).permit(:sender, :receiver, :title, :body)
     end
-=begin potrebbe servirmi dopo -A
-	def adm_message_params
-		list_params_allowed = [:sender, :receiver, :title, :body]
-		list_params_allowed << :role if :receiver.is_admin?        
-		params.require(:message).permit(list_params_allowed)
+
+	def adm_message_params        
+		params.require(:message).permit(:sender, "admin", :title, :body)
     end
-=end
+	def mod_message_params        
+		params.require(:message).permit(:sender, "mod", :title, :body)
+    end
+	
+
 end
