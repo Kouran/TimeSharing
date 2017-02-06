@@ -9,18 +9,16 @@ class UserPlatformDataController < ApplicationController
   end
 
   def permission
-	@user=User.find_by(nickname: params[:nick])
-	@data=UserPlatformDatum.find_by(user_id: @user.id)
-	@data.access=params[:permission]
-	@data.save
+	if not @user=User.find_by(nickname: params[:nick]) then redirect_to "/admin" and return end
+	@user.plat.access=params[:permission]
+	@user.plat.save
 	redirect_to "/admin"
   end
 
   def wallet
-	@user=User.find_by(nickname: params[:nick])
-	@data=UserPlatformDatum.find_by(user_id: @user.id)
-	@data.wallet+=params[:amount].to_i
-	@data.save
+	if not @user=User.find_by(nickname: params[:nick]) then redirect_to "/admin" and return end
+	@user.plat.wallet+=params[:amount].to_i
+	@user.plat.save
 	redirect_to "/admin"
   end
   

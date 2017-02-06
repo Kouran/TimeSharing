@@ -42,15 +42,15 @@ Rails.application.routes.draw do
 
 	#Aggiungere una route per creare le transazioni
 	post "Ads/close/:id" => "transactions#new"
-    post "/transactions/create" => "transactions#new"
+    #post "/transactions/create" => "transactions#new"
 
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
 	get "/mod" => "administration#mod"
-	post "/user_platform_data/permission" => "user_platform_data#permission"
-	post "/administration/wallet" => "user_platform_data#wallet"
-	post "/users/nick_destroy" => "users#nick_destroy"
-	post "/ads/delete" => "ads#param_delete"
+	put "/user_platform_data/permission" => "user_platform_data#permission"
+	put "/user_platform_data/wallet" => "user_platform_data#wallet"
+	delete "/users/nick_destroy" => "users#nick_destroy"
+	delete "/ads/delete" => "ads#param_delete"
 	get "/unauthorized" => "administration#unauthorized"
 
 

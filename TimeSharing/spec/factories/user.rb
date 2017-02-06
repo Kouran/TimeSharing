@@ -16,18 +16,18 @@ FactoryGirl.define do
 	end
 
 	factory :mod, class: User do
-		email "email@email.com"
+		email "mod@email.com"
 		password "password"
 		password_confirmation "password"
-		nickname "nickname"
+		nickname "mod"
 		association :plat, factory: :mod_data
 	end
 
 	factory :admin, class: User do
-		email "email@email.com"
+		email "admin@email.com"
 		password "password"
 		password_confirmation "password"
-		nickname "nickname"
+		nickname "admin"
 		association :plat, factory: :admin_data
 	end
 end

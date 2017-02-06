@@ -80,16 +80,27 @@ RSpec.describe TransactionsController, :type=> :controller do
 		context "when user is logged and with valid parameters" do
 			before(:each) do
 				@user=create(:user)
+				@plat=create(:user_data)
+				@user.plat=@plat
 				controller.session[:user_id]=@user.id
 				@user2=create(:user2)
+				@plat2=create(:user_data)
+				@user2.plat=@plat2
 				@ad=create(:ad)
 				post :create, {:transaction => {:to => @user2.nickname, :ad => @ad.id, :amount => "1"}}
+				@user.reload
+				@user2.reload
+				@ad.reload
 			end
 			it "creates the transaction" do
 				expect(Transaction.count).to eq(1)
 				end
-			#it "moves the amount from applicant to fullfiller"
-			#it "sets the ad to closed"
+			it "moves the amount from applicant to fullfiller" do
+				expect(@user.plat.wallet-@user2.plat.wallet).to eq(-2)
+			end
+			it "sets the ad to closed" do
+				expect(@ad.closed).to eq(true)
+			end
 			it "redirects to the ads" do
 				expect(response).to redirect_to("/ads")
 				end

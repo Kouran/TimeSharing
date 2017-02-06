@@ -1,53 +1,59 @@
 class PersonalDataController < ApplicationController
 	include SessionsHelper
-  before_action :set_personal_datum, only: [:show, :edit, :update, :destroy]
+	before_action :set_personal_datum, only: [:show, :edit, :update, :destroy]
+	before_action :logged_in?
 
   # GET /personal_data/1
-  # GET /personal_data/1.json
   def show
 	@user=User.find_by(id: @personal_datum.user_id)
   end
 
   # GET /personal_data/new
   def new
-	if current_user==nil then redirect_to "/" and return end
-	@userid=current_user
-	if PersonalDatum.exists?(user_id: @userid) then
-	@plat=PersonalDatum.find_by(user_id: @userid).id
-	redirect_to "/personal_data/#{@plat}/edit" and return end
+	if current_user==nil then redirect_to "/unauthorized" and return end
+	@userid=current_user.id
+	if PersonalDatum.exists?(user_id: @userid)
+		@plat=PersonalDatum.find_by(user_id: @userid).id
+		redirect_to "/personal_data/#{@plat}/edit" 
+		return 
+	end
     @personal_datum = PersonalDatum.new
   end
 
   # GET /personal_data/1/edit
   def edit
+	if not (current_user==@personal_datum.user or check_auth(3)) then redirect_to "/unauthorized" and return end
   end
 
   # POST /personal_data
-  # POST /personal_data.json
   def create
-    @personal_datum = PersonalDatum.new(personal_datum_params)
-
-    respond_to do |format|
-      if @personal_datum.save
-        format.html { redirect_to @personal_datum, notice: 'Personal datum was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
+	if @personal=PersonalDatum.find_by(user_id: params[:personal_datum][:user_id]) then redirect_to @personal and return end
+	@personal_datum = PersonalDatum.new(personal_datum_params)
+	@personal_datum.user=current_user
+	if @personal_datum.save
+		redirect_to @personal_datum
+	else
+		render :new
+	end
   end
 
-  # PATCH/PUT /personal_data/1
-  # PATCH/PUT /personal_data/1.json
+  # PUT /personal_data/1
   def update
-    respond_to do |format|
-      if @personal_datum.update(personal_datum_params)
-        format.html { redirect_to @personal_datum, notice: 'Personal datum was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
+	if not (current_user==@personal_datum.user or check_auth(3)) then redirect_to "/unauthorized" and return end
+	if @personal_datum.update(personal_datum_params)
+		redirect_to @personal_datum
+ 	else
+		render :edit
+	end
   end
   
+	def destroy
+		if not (current_user==@personal_datum.user or check_auth(3)) then redirect_to "/unauthorized" and return end
+		@user=@personal_datum.user
+		@personal_datum.destroy
+		redirect_to @user
+	end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

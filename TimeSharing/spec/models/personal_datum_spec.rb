@@ -11,5 +11,14 @@ RSpec.describe PersonalDatum, :type=> :model do
 			personal.user=nil
 			expect(personal).to_not be_valid
 		end
+		it "is not valid if duplicated user" do
+			personal2=build(:personaldatum)			
+			personal=build(:personaldatum)
+			user=create(:user)
+			personal2.user=user
+			personal2.save
+			personal.user=user
+			expect(personal).to_not be_valid
+		end
 	end
 end

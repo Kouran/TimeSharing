@@ -28,14 +28,12 @@ class TransactionsController < ApplicationController
 	@transaction=Transaction.new
 	@applicant=current_user
 	@transaction.from=@applicant
-	@applicant=@applicant.plat
 	@fullfiller=User.find_by(nickname: params[:transaction][:to])
 	@transaction.to=@fullfiller
-	@fullfiller=@fullfiller.plat
-	@applicant.wallet-=params[:transaction][:amount].to_i
-	@fullfiller.wallet+=params[:transaction][:amount].to_i
-	@applicant.save
-	@fullfiller.save
+	@applicant.plat.wallet-=params[:transaction][:amount].to_i
+	@fullfiller.plat.wallet+=params[:transaction][:amount].to_i
+	@applicant.plat.save
+	@fullfiller.plat.save
 	@ad=Ad.find(params[:transaction][:ad])
 	@transaction.ad=@ad
 	@ad.fullfiller_user=params[:transaction][:to]

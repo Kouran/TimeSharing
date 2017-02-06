@@ -60,7 +60,10 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   def destroy
-	if not (current_user==params[:id] or check_auth(3)) then redirect_to "/unauthorized" and return end
+	if not (current_user==@user or check_auth(3)) then redirect_to "/unauthorized" and return end
+	if current_user==@user
+		log_out
+	end
 	if @user.plat
 		@userplatformdata=@user.plat
 		@userplatformdata.destroy
@@ -69,11 +72,11 @@ class UsersController < ApplicationController
 		@personaldata.destroy
 	end
     @user.destroy
-	redirect_to "/users"
+	redirect_to "/"
   end
 
   def nick_destroy
-	@user=User.find_by(nickname: params[:nick])
+	if not @user=User.find_by(nickname: params[:nick]) then redirect_to "/admin" and return end
 	if @user.plat
 		@userplatformdata=@user.plat
 		@userplatformdata.destroy
