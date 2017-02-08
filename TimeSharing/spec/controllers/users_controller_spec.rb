@@ -24,6 +24,16 @@ RSpec.describe UsersController, :type=> :controller do
 		end
 	end
 
+	describe "GET show" do
+		context "when parameter is valid" do
+			it "renders the user" do
+				user=create(:user)
+				get :show, id: user.id
+				expect(response).to render_template('show')
+			end
+		end
+	end
+
 	describe "GET new" do
 		it "renders the 'new' view" do
 			get :new

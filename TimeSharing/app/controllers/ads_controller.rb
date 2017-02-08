@@ -3,7 +3,7 @@ class AdsController < ApplicationController
   include SessionsHelper
 
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in?, only: [:my]
+  before_action :logged_in?, only: [:my, :new, :create, :edit, :update, :destroy]
   before_action :is_mod?, only: [:param_delete]
   respond_to :html
 
@@ -42,27 +42,35 @@ end
 
   def new
     @ad = Ad.new
-    respond_with(@ad)
+    #respond_with(@ad)
   end
 
   def edit
-	if not (current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2) then redirect_to "/unauthorized"  and return end
+	if not ((current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2)) then redirect_to "/unauthorized"  and return end
   end
 
   def create
       @ad = Ad.new(ad_params)
-      @ad.save
-
-     respond_with(@ad)
+	  @ad.applicant_user=current_user.nickname
+      if @ad.save
+		redirect_to(@ad)
+	  else
+		redirect_to(:back)
+	  end
   end
 
   def update
-    @ad.update(ad_params)
-    respond_with(@ad)
+	if not ((current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2)) then redirect_to "/unauthorized"  and return end
+	params[:ad].delete :applicant_user
+    if @ad.update(ad_params)
+		redirect_to(@ad)
+	else
+		redirect_to(:back)
+	end
   end
 
   def destroy
-      if not (current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2) then redirect_to "/unauthorized"  and return end
+      if not ((current_user.nickname==@ad.applicant_user and not @ad.closed) or check_auth(2)) then redirect_to "/unauthorized"  and return end
       @ad.destroy
       redirect_to "/ads" and return
   end
@@ -70,7 +78,7 @@ end
   def param_delete
 	@ad = Ad.find_by(id: params[:id])
 	@ad.destroy
-    redirect_to "/ads" and return
+    redirect_to "/mod" and return
   end
 
   private
