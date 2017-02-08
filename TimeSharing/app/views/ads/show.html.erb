@@ -43,6 +43,9 @@
   <strong>Fullfiller user:</strong>
   <%= @ad.fullfiller_user %>
 </p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Try%20to%20use: TimeSharing.org%20" data-size="large"> Tweet </a>
 <%= link_to 'Back', ads_path %>
 <% if @ad.applicant_user == current_user.nickname or check_auth(2) %>
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
