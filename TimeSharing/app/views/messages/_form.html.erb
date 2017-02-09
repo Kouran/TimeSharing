@@ -15,19 +15,19 @@
   </div>
   <div class="field">
 
-    <%= f.label :receiver %><br>
+    <%= f.label :receiver, "receiver" %><br>
 
     <%= f.text_field :receiver, :value => params[:to] %>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, "title" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label :body, "body" %><br>
     <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "send" %>
   </div>
 <% end %>

@@ -13,26 +13,26 @@
     </div>
   <% end %>
 
- <%= form_for(@user, url: signup_path) do |f| %>
+ <%= form_for(@user, url: signup_path, html: {id: "signup"}) do |f| %>
 
 		    <%= render "shared/error_messages" %>
 			<br>
 
-			<%= f.label :nickname %><br>
-			<%= f.text_field :nickname, class: "form-control" %>
+			<%= f.label :nickname, "nickname" %><br>
+			<%= f.text_field :nickname, class: "form-control"%>
 			<br>
 
-			<%= f.label :email %>
+			<%= f.label :email, "email" %>
 			<%= f.email_field :email, class: "form-control" %>
 
-			<%= f.label :password %>
+			<%= f.label :password, "password" %>
 			<%= f.password_field :password, class: "form-control" %>
 			<br>
 
-			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.label :password_confirmation, "confirmation" %>
 			<%= f.password_field :password_confirmation, class: "form-control" %>
 			<br>
 
-			<%= f.submit%>
+			<%= f.submit "Submit"%>
 		<% end %>
 <% end %>

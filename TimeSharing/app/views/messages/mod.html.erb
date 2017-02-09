@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag "micro", media: "all"%>
+
+<h1>Listing report</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sender</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+   		<% @messages.each do |message| %>
+      <tr>
+        <td><%= message.sender %></td>
+        <td><%= message.title %></td>
+        <td><%= message.body %></td>
+        <td><%= link_to 'Show', message %></td>
+      </tr>
+    	<% end %>
+
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Back', "/"  %>

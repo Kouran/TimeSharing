@@ -28,6 +28,7 @@
         <td><%= ad.applicant_user %></td>
         <td><%= ad.fullfiller_user %></td>
         <td><%= link_to 'Show', ad %></td>
+		<% if current_user %>
 		<% if current_user.nickname == ad.applicant_user and not ad.closed==true %>
 		<td><%= link_to 'Close', "/Ads/close/#{ad.id}", method: :post %>
 		<% elsif not current_user.nickname == ad.applicant_user %>
@@ -42,6 +43,7 @@
         <td>
         <td>
         <% end %>
+		<% end %>
       </tr>
     <% end %>
   </tbody>

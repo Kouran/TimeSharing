@@ -230,7 +230,7 @@ RSpec.describe UsersController, :type=> :controller do
 		end
 	end
 
-	describe "DELETE nick_destroy" do
+	describe "POST nick_destroy" do
 		context "when user is admin and valid parameter is passed" do
 			before(:each) do
 				user=create(:user)
@@ -239,7 +239,7 @@ RSpec.describe UsersController, :type=> :controller do
 				personal.save
 				@admin=create(:admin)
 				controller.session[:user_id]=@admin.id
-				delete :nick_destroy, nick: user.nickname
+				post :nick_destroy, nick: user.nickname
 			end
 			it "destroys its data" do
 				expect(User.count).to eq(1)
@@ -258,14 +258,14 @@ RSpec.describe UsersController, :type=> :controller do
 			it "redirect to administration page" do
 				@admin=create(:admin)
 				controller.session[:user_id]=@admin.id
-				delete :nick_destroy, nick: "not exists"
+				post :nick_destroy, nick: "not exists"
 				expect(response).to redirect_to("/admin")
 			end
 		end
 		context "when user is not admin or not logged" do
 			it "redirects to a specific unauthorized page" do
 				user=create(:user)
-				delete :nick_destroy, :nick => user.nickname
+				post :nick_destroy, :nick => user.nickname
 				expect(response).to redirect_to("/unauthorized")
 			end
 		end

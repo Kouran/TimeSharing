@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :ads
 
 	root 'welcome#home'
-	get "welcome/homepage" => "welcome#homepage"
+	#get "welcome/homepage" => "welcome#homepage"
     	get "welcome/result" => "ads#result"
 	#messages/index.html.erb
 	get "messages" => "messages#index"
@@ -47,10 +47,10 @@ Rails.application.routes.draw do
 	#route per le pagine di amministrazione
 	get "/admin" => "administration#admin"
 	get "/mod" => "administration#mod"
-	put "/user_platform_data/permission" => "user_platform_data#permission"
-	put "/user_platform_data/wallet" => "user_platform_data#wallet"
-	delete "/users/nick_destroy" => "users#nick_destroy"
-	delete "/ads/delete" => "ads#param_delete"
+	post "/user_platform_data/permission" => "user_platform_data#permission"
+	post "/user_platform_data/wallet" => "user_platform_data#wallet"
+	post "/users/nick_destroy" => "users#nick_destroy"
+	post "/Ads/delete" => "ads#param_delete"
 	get "/unauthorized" => "administration#unauthorized"
 
 

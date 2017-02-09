@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 	include SessionsHelper
-  before_action :logged_in?, only: [:index, :show, :new, :edit, :crate, :update, :destroy, :admin_report]
+  before_action :logged_in?, only: [:index, :show, :new, :edit, :create, :update, :destroy, :admin_report]
   before_action :set_message, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, only: [:admin, :destroy]
   before_action :is_mod?, only: [:mod]
@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 		@user=User.find(current_user).nickname
 		@messages = Message.where("sender = ? OR receiver = ? ", @user, @user) 
 		if params[:search]
-			@messages=Message.search(params[:search]).order("created_at DESC") 
+			@messages=Message.where("sender = ? OR receiver = ? ", @user, @user).search(params[:search]).order("created_at DESC") 
 		end
 	end
 
@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
   # POST /messages
   def create
     @message = Message.new(message_params)
+	@message.sender=current_user.nickname
     if @message.save
         redirect_to @message
     else
@@ -38,7 +39,7 @@ class MessagesController < ApplicationController
   # DELETE /messages/1
   def destroy
     @message.destroy
-    redirect_to messages_url
+    redirect_to "/admin"
   end
 
 	def admin_report	

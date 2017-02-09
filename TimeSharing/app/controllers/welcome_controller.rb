@@ -1,9 +1,4 @@
 class WelcomeController < ApplicationController
-  def index
-  end
-
-  def homepage
-  end
 
   def home
 			if not current_user.present?
@@ -11,10 +6,12 @@ class WelcomeController < ApplicationController
 			end
   end
 
+	def contatti
+	end
 
-  def result
-      parametro=params[:search]
-      @ads = Ad.where("title LIKE ? or category LIKE ? or description LIKE ? or applicant_user LIKE ?", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%").order("created_at DESC")
-  end
+  #def result
+      #parametro=params[:search]
+      #@ads = Ad.where("title LIKE ? or category LIKE ? or description LIKE ? or applicant_user LIKE ?", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%").order("created_at DESC")
+ # end
 
 end

@@ -308,13 +308,13 @@ RSpec.describe AdsController, :type=> :controller do
 		end
 	end
 
-	describe "DELETE param_delete" do
+	describe "POST param_delete" do
 		context "when user is mod" do
 			before(:each) do
 				user=create(:mod)
 				target=create(:ad)
 				controller.session[:user_id]=user.id
-				delete :param_delete, id: target.id
+				post :param_delete, id: target.id
 			end
 			it "destroys the ad" do
 				expect(Ad.count).to eq(0)
@@ -326,7 +326,7 @@ RSpec.describe AdsController, :type=> :controller do
 		context "when user is not mod" do
 			it "redirects to a specific unauthorized page" do
 				target=create(:ad)
-				delete :destroy, id: target.id
+				post :destroy, id: target.id
 				expect(response).to redirect_to("/unauthorized")
 			end
 		end

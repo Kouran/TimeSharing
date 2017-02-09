@@ -11,13 +11,13 @@ RSpec.describe UserPlatformDataController, :type=> :controller do
 		end
 	end
 
-	describe "PUT permission" do
+	describe "POST permission" do
 		context "when user is admin and parameters are valid" do
 			before(:each) do
 				@user=create(:user)
 				admin=create(:admin)
 				controller.session[:user_id]=admin.id
-				put :permission, {:nick=>@user.nickname, :permission=>2}
+				post :permission, {:nick=>@user.nickname, :permission=>2}
 				@user.reload
 			end
 			it "modify permission of user" do
@@ -32,7 +32,7 @@ RSpec.describe UserPlatformDataController, :type=> :controller do
 				@user=create(:user)
 				admin=create(:admin)
 				controller.session[:user_id]=admin.id
-				put :permission, {:nick=>@user.nickname, :permission=>5}
+				post :permission, {:nick=>@user.nickname, :permission=>5}
 				@user.reload
 			end
 			it "doesn't modify permission of user" do
@@ -46,19 +46,19 @@ RSpec.describe UserPlatformDataController, :type=> :controller do
 			it "redirects to specific unauthorized page" do
 				user=create(:user)
 				controller.session[:user_id]=user.id
-				put :permission, {:nick=>user.nickname, :permission=>2}
+				post :permission, {:nick=>user.nickname, :permission=>2}
 				expect(response).to redirect_to("/unauthorized")
 			end
 		end
 	end
 
-	describe "PUT wallet" do
+	describe "POST wallet" do
 		context "when user is admin and parameters are valid" do
 			before(:each) do
 				@user=create(:user)
 				admin=create(:admin)
 				controller.session[:user_id]=admin.id
-				put :wallet, {:nick=>@user.nickname, :amount=>"2"}
+				post :wallet, {:nick=>@user.nickname, :amount=>"2"}
 				@user.reload
 			end
 			it "modify wallet of user" do
@@ -73,7 +73,7 @@ RSpec.describe UserPlatformDataController, :type=> :controller do
 				@user=create(:user)
 				admin=create(:admin)
 				controller.session[:user_id]=admin.id
-				put :wallet, {:nick=>@user.nickname, :amount=>"NaN"}
+				post :wallet, {:nick=>@user.nickname, :amount=>"NaN"}
 				@user.reload
 			end
 			it "doesn't modify wallet of user" do
@@ -87,7 +87,7 @@ RSpec.describe UserPlatformDataController, :type=> :controller do
 			it "redirects to specific unauthorized page" do
 				user=create(:user)
 				controller.session[:user_id]=user.id
-				put :wallet, {:nick=>user.nickname, :wallet=>2}
+				post :wallet, {:nick=>user.nickname, :wallet=>2}
 				expect(response).to redirect_to("/unauthorized")
 			end
 		end

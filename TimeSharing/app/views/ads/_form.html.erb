@@ -14,29 +14,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, "title" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
+    <%= f.label :category, "category" %><br>
     <%= f.text_field :category %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, "description" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :expected_hours %><br>
+    <%= f.label :expected_hours, "expected_hours" %><br>
     <%= f.text_field :expected_hours %>
   </div>
   <div class="field">
-    <%= f.label :deadline %><br>
+    <%= f.label :deadline, "deadline" %><br>
     <%= f.date_select :deadline %>
   </div>
   <%= f.hidden_field(:closed, :value => false) %>
   <%= f.hidden_field(:applicant_user, :value => current_user.nickname) %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit"%>
   </div>
 <% end %>
