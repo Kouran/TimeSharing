@@ -8,7 +8,7 @@ Administration
 <br>
 Delete User
 <br>
-<form action="/users/nick_destroy" method="delete">
+<form action="/users/nick_destroy" method="post" id="user">
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 	Nickname: <%= text_field_tag "nick" %>
 	<br>
@@ -22,7 +22,7 @@ Delete User
 <hr>
 <br>
 Wallet Update
-<form action="/user_platform_data/wallet" method="put">
+<form action="/user_platform_data/wallet" method="post" id="wallet">
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 	Nickname: <%= text_field_tag "nick" %>
 	Amount to be added: <%= number_field_tag "amount" %>
@@ -37,7 +37,7 @@ Wallet Update
 <hr>
 <br>
 Grant Permissions
-<form action="/user_platform_data/permission" method="put">
+<form action="/user_platform_data/permission" method="post" id="permission">
 	Nickname: <%= text_field_tag "nick" %>
 	Permissions to grant (0: Unauthorized user, 1: Basic user, 2: Mod, 3: Administrator): <%= number_field_tag "permission", nil, min: 0, max: 3 %>
 	<br>

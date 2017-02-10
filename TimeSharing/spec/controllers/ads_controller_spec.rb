@@ -76,6 +76,9 @@ RSpec.describe AdsController, :type=> :controller do
 	describe "GET show" do
 		it "renders the ad" do
 			@ad=create(:ad)
+			user=create(:user)
+			@ad.applicant_user=user.nickname
+			@ad.save
 			get :show, id: @ad.id
 			expect(response).to render_template('show')
 		end

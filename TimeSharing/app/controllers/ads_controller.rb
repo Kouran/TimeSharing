@@ -36,7 +36,7 @@ end
   end
 
   def show
-    #  @applicant=User.find_by(nickname: @ad.applicant_user).id
+    @applicant=User.find_by(nickname: @ad.applicant_user).id
     #respond_with(@ad)
   end
 
