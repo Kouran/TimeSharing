@@ -9,6 +9,9 @@ class WelcomeController < ApplicationController
 	def contatti
 	end
 
+	def help
+	end
+
   #def result
       #parametro=params[:search]
       #@ads = Ad.where("title LIKE ? or category LIKE ? or description LIKE ? or applicant_user LIKE ?", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%", "%#{parametro}%").order("created_at DESC")

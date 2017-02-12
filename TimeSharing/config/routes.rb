@@ -39,6 +39,10 @@ Rails.application.routes.draw do
 	get "Ads/New" => "ads#new"
 	#route per contatti
 	get "welcome/contatti" => "welcome#contatti"
+	get "/help" => "welcome#help"
+
+	#prova per telegram
+	post "/webhook" => "webhook#receive"
 
 
 	#Aggiungere una route per creare le transazioni
