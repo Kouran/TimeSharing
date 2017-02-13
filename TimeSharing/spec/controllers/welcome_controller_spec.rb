@@ -16,7 +16,7 @@ RSpec.describe WelcomeController, :type=> :controller do
 	end
 	describe "GET help" do
 		it "renders the help page" do
-			get :contatti
+			get :help
 			expect(response).to render_template('help')
 		end
 	end
