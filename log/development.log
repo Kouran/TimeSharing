@@ -177,3 +177,2272 @@
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.5ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio2"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:13.081023"], ["deadline", "2017-02-20"], ["description", "Laboratorio di Informatica"], ["expected_hours", 1.0], ["title", "Titolo5"], ["updated_at", "2017-05-01 21:42:13.081023"]]
   [1m[36m (23.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:52:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#home as HTML
+  Rendered welcome/home.html.erb within layouts/application (161.4ms)
+Completed 200 OK in 2930ms (Views: 2912.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/administration.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/ads.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/personal_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/user_platform_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/webhook.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/flexslider.css?body=1" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/assets/time-to-share2.jpg" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+
+Started GET "/app/assets/images/body.png" for 127.0.0.1 at 2017-05-01 23:52:07 +0200
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/body.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (7.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (21.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.4ms)
+
+
+Started GET "/assets/app/assets/images/navigation-border.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-border.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (15.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.4ms)
+
+
+Started GET "/assets/app/assets/images/navigation-arr.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (8.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/assets/app/assets/images/navigation-a.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-a.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (7.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.9ms)
+
+
+Started GET "/assets/app/assets/images/cols.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/cols.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.0ms)
+
+
+Started GET "/assets/images/navigation.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/navigation.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.2ms)
+
+
+Started GET "/assets/app/assets/images/services.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/services.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (14.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.4ms)
+
+
+Started GET "/assets/app/assets/images/slider-arr.png" for 127.0.0.1 at 2017-05-01 23:52:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/slider-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.5ms)
+
+
+Started GET "/ads" for 127.0.0.1 at 2017-05-01 23:52:18 +0200
+Processing by AdsController#index as HTML
+  [1m[35mAd Load (0.9ms)[0m  SELECT "ads".* FROM "ads"
+  Rendered ads/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 228ms (Views: 220.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/micro.css?body=1" for 127.0.0.1 at 2017-05-01 23:52:18 +0200
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2017-05-01 23:52:28 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.3ms)[0m  [1mSELECT  "ads".* FROM "ads"  WHERE "ads"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."nickname" = 'tizio' LIMIT 1
+Completed 500 Internal Server Error in 89ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/ads_controller.rb:39:in `show'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-01 23:52:42 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (231.2ms)
+Completed 200 OK in 414ms (Views: 413.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-05-01 23:52:46 +0200
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (25.6ms)
+  Rendered users/_form.html.erb (63.8ms)
+  Rendered users/new.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 280ms (Views: 274.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-05-01 23:52:52 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tzfG1kTHFDXmG46GG9MwQxbRCykYLJ47wmVSTEea2uc=", "user"=>{"nickname"=>"a", "email"=>"ada@a.a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ada@a.a' LIMIT 1
+  [1m[36mUser Exists (2.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'a' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"  [["access", 1], ["created_at", "2017-05-01 21:52:52.710899"], ["updated_at", "2017-05-01 21:52:52.710899"], ["wallet", 2]]
+  [1m[36m (50.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ada@a.a' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'a' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "nickname", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-05-01 21:52:52.790621"], ["email", "ada@a.a"], ["nickname", "a"], ["password_digest", "$2a$10$CvwOSlDV0GZFAmeHa.OEuOadw.CnDWs.m1E1FXjhc/9YyacjUpyTC"], ["updated_at", "2017-05-01 21:52:52.790621"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "user_platform_data" SET "updated_at" = $1, "user_id" = $2 WHERE "user_platform_data"."id" = 10  [["updated_at", "2017-05-01 21:52:52.792393"], ["user_id", 4]]
+  [1m[36m (34.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 256ms (ActiveRecord: 95.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-05-01 23:52:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mPersonalDatum Load (0.7ms)[0m  SELECT  "personal_data".* FROM "personal_data"  WHERE "personal_data"."user_id" = 4 LIMIT 1
+  [1m[36mUserPlatformDatum Load (0.2ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = $1 LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 230ms (Views: 195.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:52:56 +0200
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 266ms (Views: 262.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app/assets/images/body.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/body.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/assets/images/navigation.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/navigation.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/assets/app/assets/images/navigation-a.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-a.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.9ms)
+
+
+Started GET "/assets/app/assets/images/services.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/services.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.2ms)
+
+
+Started GET "/assets/app/assets/images/navigation-border.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-border.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.1ms)
+
+
+Started GET "/assets/app/assets/images/cols.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/cols.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (8.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.5ms)
+
+
+Started GET "/assets/app/assets/images/navigation-arr.png" for 127.0.0.1 at 2017-05-01 23:52:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.3ms)
+
+
+Started GET "/ads" for 127.0.0.1 at 2017-05-01 23:52:59 +0200
+Processing by AdsController#index as HTML
+  [1m[36mAd Load (0.6ms)[0m  [1mSELECT "ads".* FROM "ads"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUserPlatformDatum Load (0.3ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  Rendered ads/index.html.erb within layouts/application (84.9ms)
+Completed 200 OK in 286ms (Views: 281.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2017-05-01 23:53:01 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.5ms)[0m  [1mSELECT  "ads".* FROM "ads"  WHERE "ads"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."nickname" = 'tizio' LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/ads_controller.rb:39:in `show'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:12 +0200
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 308ms (Views: 306.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 248ms (Views: 246.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/ads.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/administration.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/personal_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/user_platform_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/webhook.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/flexslider.css?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/app/assets/images/body.png" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/body.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.5ms)
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/time-to-share2.jpg" for 127.0.0.1 at 2017-05-01 23:53:14 +0200
+
+
+Started GET "/assets/app/assets/images/navigation-a.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-a.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.5ms)
+
+
+Started GET "/assets/images/navigation.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/navigation.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.5ms)
+
+
+Started GET "/assets/app/assets/images/services.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/services.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (19.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.8ms)
+
+
+Started GET "/assets/app/assets/images/cols.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/cols.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.7ms)
+
+
+Started GET "/assets/app/assets/images/navigation-arr.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/assets/app/assets/images/navigation-border.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-border.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (7.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/assets/app/assets/images/slider-arr.png" for 127.0.0.1 at 2017-05-01 23:53:15 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/slider-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (20.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/Ads/New" for 127.0.0.1 at 2017-05-01 23:53:17 +0200
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered ads/_form.html.erb (151.0ms)
+  Rendered ads/new.html.erb within layouts/application (165.2ms)
+Completed 200 OK in 371ms (Views: 367.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/ads" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+Processing by AdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tzfG1kTHFDXmG46GG9MwQxbRCykYLJ47wmVSTEea2uc=", "ad"=>{"title"=>"eaw", "category"=>"dsc", "description"=>"dcscq", "expected_hours"=>"1", "deadline(1i)"=>"2017", "deadline(2i)"=>"5", "deadline(3i)"=>"1", "closed"=>"false", "applicant_user"=>"a"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "closed", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["applicant_user", "a"], ["category", "dsc"], ["closed", "f"], ["created_at", "2017-05-01 21:53:23.218818"], ["deadline", "2017-05-01"], ["description", "dcscq"], ["expected_hours", 1.0], ["title", "eaw"], ["updated_at", "2017-05-01 21:53:23.218818"]]
+  [1m[36m (61.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/ads/16
+Completed 302 Found in 70ms (ActiveRecord: 62.2ms)
+
+
+Started GET "/ads/16" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mAd Load (0.3ms)[0m  SELECT  "ads".* FROM "ads"  WHERE "ads"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."nickname" = 'a' LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered ads/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 205ms (Views: 201.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/administration.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/ads.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/personal_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/user_platform_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/webhook.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:23 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:26 +0200
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 265ms (Views: 258.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/time-to-share2.jpg" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/flexslider.css?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+
+Started GET "/app/assets/images/body.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/body.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.1ms)
+
+
+Started GET "/assets/app/assets/images/cols.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/cols.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/assets/app/assets/images/services.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/services.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (7.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.3ms)
+
+
+Started GET "/assets/images/navigation.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/navigation.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (15.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.3ms)
+
+
+Started GET "/assets/app/assets/images/navigation-arr.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.7ms)
+
+
+Started GET "/assets/app/assets/images/navigation-border.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-border.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.5ms)
+
+
+Started GET "/assets/app/assets/images/navigation-a.png" for 127.0.0.1 at 2017-05-01 23:53:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-a.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (9.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/Ads/My" for 127.0.0.1 at 2017-05-01 23:53:29 +0200
+Processing by AdsController#my as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAd Load (2.1ms)[0m  [1mSELECT "ads".* FROM "ads"  WHERE (applicant_user LIKE '%a%')[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered ads/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 223ms (Views: 217.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/ads/16" for 127.0.0.1 at 2017-05-01 23:53:30 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mAd Load (0.5ms)[0m  [1mSELECT  "ads".* FROM "ads"  WHERE "ads"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."nickname" = 'a' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered ads/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 213ms (Views: 206.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (125.2ms)
+Completed 200 OK in 298ms (Views: 296.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:32 +0200
+
+
+Started GET "/ads" for 127.0.0.1 at 2017-05-01 23:53:34 +0200
+Processing by AdsController#index as HTML
+  [1m[35mAd Load (0.7ms)[0m  SELECT "ads".* FROM "ads"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUserPlatformDatum Load (0.6ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered ads/index.html.erb within layouts/application (146.1ms)
+Completed 200 OK in 360ms (Views: 355.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2017-05-01 23:53:38 +0200
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAd Load (0.6ms)[0m  [1mSELECT  "ads".* FROM "ads"  WHERE "ads"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."nickname" = 'tizio' LIMIT 1
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/ads_controller.rb:39:in `show'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/administration.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/ads.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/user_platform_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/personal_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/webhook.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:47 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 294ms (Views: 289.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:51 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:52 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:52 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:52 +0200
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-05-01 23:53:55 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mPersonalDatum Load (0.5ms)[0m  [1mSELECT  "personal_data".* FROM "personal_data"  WHERE "personal_data"."user_id" = 4 LIMIT 1[0m
+  [1m[35mUserPlatformDatum Load (0.2ms)[0m  SELECT  "user_platform_data".* FROM "user_platform_data"  WHERE "user_platform_data"."user_id" = $1 LIMIT 1  [["user_id", 4]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 224ms (Views: 215.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (83.6ms)
+Completed 200 OK in 265ms (Views: 262.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:57 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 23:53:59 +0200
+Processing by WelcomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered welcome/home.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 272ms (Views: 270.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:59 +0200
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:53:59 +0200
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/administration.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/ads.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/webhook.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/personal_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/user_platform_data.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/flexslider.css?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/jquery-1.7.2.min.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/app/assets/images/body.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/body.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.3ms)
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/jquery.flexslider-min.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/functions.js?body=1" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/app/assets/images/navigation-border.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-border.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/assets/images/navigation.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/navigation.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (11.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.4ms)
+
+
+Started GET "/assets/time-to-share2.jpg" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+
+Started GET "/assets/app/assets/images/navigation-a.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-a.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.2ms)
+
+
+Started GET "/assets/app/assets/images/navigation-arr.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/navigation-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (19.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.3ms)
+
+
+Started GET "/assets/app/assets/images/cols.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/cols.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.6ms)
+
+
+Started GET "/assets/app/assets/images/services.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/services.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (8.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.7ms)
+
+
+Started GET "/assets/app/assets/images/slider-arr.png" for 127.0.0.1 at 2017-05-01 23:54:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/app/assets/images/slider-arr.png"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:514:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (6.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.5ms)
