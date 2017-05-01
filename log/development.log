@@ -1,0 +1,179 @@
+  [1m[36m (634.6ms)[0m  [1mDROP DATABASE IF EXISTS "timesharing_development"[0m
+  [1m[35m (1120.2ms)[0m  CREATE DATABASE "timesharing_development" ENCODING = 'unicode'
+  [1m[36m (248.9ms)[0m  [1mCREATE TABLE "ads" ("id" serial primary key, "title" character varying(255), "category" character varying(255), "description" text, "expected_hours" float, "deadline" date, "closed" boolean, "applicant_user" character varying(255), "fullfiller_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (236.7ms)[0m  CREATE TABLE "messages" ("id" serial primary key, "sender" character varying(255), "receiver" character varying(255), "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (281.6ms)[0m  [1mCREATE TABLE "personal_data" ("id" serial primary key, "name" character varying(255), "surname" character varying(255), "date_of_birth" date, "city" character varying(255), "actual_job" character varying(255), "phone" character varying(255), "skills" text, "created_at" timestamp, "updated_at" timestamp, "user_id" integer) [0m
+  [1m[35m (106.3ms)[0m  CREATE TABLE "transactions" ("id" serial primary key, "from_id" integer, "to_id" integer, "amount" integer, "created_at" timestamp, "updated_at" timestamp, "ad_id" integer) 
+  [1m[36m (107.0ms)[0m  [1mCREATE  INDEX  "index_transactions_on_from_id" ON "transactions"  ("from_id")[0m
+  [1m[35m (115.5ms)[0m  CREATE  INDEX  "index_transactions_on_to_id" ON "transactions"  ("to_id")
+  [1m[36m (128.1ms)[0m  [1mCREATE  INDEX  "index_transactions_on_ad_id" ON "transactions"  ("ad_id")[0m
+  [1m[35m (115.4ms)[0m  CREATE TABLE "user_platform_data" ("id" serial primary key, "access" integer, "wallet" integer, "created_at" timestamp, "updated_at" timestamp, "user_id" integer) 
+  [1m[36m (181.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "created_at" timestamp, "updated_at" timestamp, "nickname" character varying(255), "password_digest" character varying(255), "plat_id" integer) [0m
+  [1m[35m (100.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (27.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (123.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (29.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109151632')
+  [1m[36m (27.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215112259')[0m
+  [1m[35m (22.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109144837')
+  [1m[36m (27.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109145156')[0m
+  [1m[35m (22.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170103163109')
+  [1m[36m (27.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215133629')[0m
+  [1m[35m (22.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215133107')
+  [1m[36m (27.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109140340')[0m
+  [1m[35m (22.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215145218')
+  [1m[36m (27.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109141229')[0m
+  [1m[35m (22.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161207052315')
+  [1m[36m (27.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215142522')[0m
+  [1m[35m (22.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161206155925')
+  [1m[36m (53.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161206223624')[0m
+  [1m[35m (29.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215132951')
+  [1m[36m (60.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109150227')[0m
+  [1m[35m (2336.6ms)[0m  DROP DATABASE IF EXISTS "timesharing_test"
+  [1m[36m (1032.5ms)[0m  [1mCREATE DATABASE "timesharing_test" ENCODING = 'unicode'[0m
+  [1m[35m (204.1ms)[0m  CREATE TABLE "ads" ("id" serial primary key, "title" character varying(255), "category" character varying(255), "description" text, "expected_hours" float, "deadline" date, "closed" boolean, "applicant_user" character varying(255), "fullfiller_user" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (162.8ms)[0m  [1mCREATE TABLE "messages" ("id" serial primary key, "sender" character varying(255), "receiver" character varying(255), "title" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (189.3ms)[0m  CREATE TABLE "personal_data" ("id" serial primary key, "name" character varying(255), "surname" character varying(255), "date_of_birth" date, "city" character varying(255), "actual_job" character varying(255), "phone" character varying(255), "skills" text, "created_at" timestamp, "updated_at" timestamp, "user_id" integer) 
+  [1m[36m (99.2ms)[0m  [1mCREATE TABLE "transactions" ("id" serial primary key, "from_id" integer, "to_id" integer, "amount" integer, "created_at" timestamp, "updated_at" timestamp, "ad_id" integer) [0m
+  [1m[35m (88.7ms)[0m  CREATE  INDEX  "index_transactions_on_from_id" ON "transactions"  ("from_id")
+  [1m[36m (149.4ms)[0m  [1mCREATE  INDEX  "index_transactions_on_to_id" ON "transactions"  ("to_id")[0m
+  [1m[35m (140.1ms)[0m  CREATE  INDEX  "index_transactions_on_ad_id" ON "transactions"  ("ad_id")
+  [1m[36m (114.8ms)[0m  [1mCREATE TABLE "user_platform_data" ("id" serial primary key, "access" integer, "wallet" integer, "created_at" timestamp, "updated_at" timestamp, "user_id" integer) [0m
+  [1m[35m (223.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "created_at" timestamp, "updated_at" timestamp, "nickname" character varying(255), "password_digest" character varying(255), "plat_id" integer) 
+  [1m[36m (139.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (74.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (281.9ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109151632')[0m
+  [1m[35m (23.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215112259')
+  [1m[36m (26.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170109144837')[0m
+  [1m[35m (23.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109145156')
+  [1m[36m (25.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170103163109')[0m
+  [1m[35m (24.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215133629')
+  [1m[36m (25.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215133107')[0m
+  [1m[35m (24.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109140340')
+  [1m[36m (25.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215145218')[0m
+  [1m[35m (23.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109141229')
+  [1m[36m (26.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161207052315')[0m
+  [1m[35m (23.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161215142522')
+  [1m[36m (26.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161206155925')[0m
+  [1m[35m (22.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20161206223624')
+  [1m[36m (26.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20161215132951')[0m
+  [1m[35m (23.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170109150227')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 1], ["created_at", "2017-05-01 21:40:50.993999"], ["updated_at", "2017-05-01 21:40:50.993999"], ["wallet", 999]]
+  [1m[35m (29.7ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'email@email.com' LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'user' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "nickname", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2017-05-01 21:40:51.174802"], ["email", "email@email.com"], ["nickname", "user"], ["password_digest", "$2a$10$Fh2zmSvQB5vnur91jPSuD.JTMA.lCgW7MNAZxHK5.Vy61pKq.PQYe"], ["updated_at", "2017-05-01 21:40:51.174802"]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "user_platform_data" SET "updated_at" = $1, "user_id" = $2 WHERE "user_platform_data"."id" = 1[0m  [["updated_at", "2017-05-01 21:40:51.177954"], ["user_id", 1]]
+  [1m[35m (36.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"  [["access", 2], ["created_at", "2017-05-01 21:40:51.223451"], ["updated_at", "2017-05-01 21:40:51.223451"], ["wallet", 999]]
+  [1m[36m (21.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mod@email.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'mod' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "nickname", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-05-01 21:40:51.339143"], ["email", "mod@email.com"], ["nickname", "mod"], ["password_digest", "$2a$10$Z1G0rAebGVBaE1P3QCxiDO5p2JxGcPAra.4hFIxT1dvIFtU10Za4C"], ["updated_at", "2017-05-01 21:40:51.339143"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "user_platform_data" SET "updated_at" = $1, "user_id" = $2 WHERE "user_platform_data"."id" = 2  [["updated_at", "2017-05-01 21:40:51.340520"], ["user_id", 2]]
+  [1m[36m (22.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 3], ["created_at", "2017-05-01 21:40:51.364590"], ["updated_at", "2017-05-01 21:40:51.364590"], ["wallet", 999]]
+  [1m[35m (37.2ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@email.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "nickname", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2017-05-01 21:40:51.483718"], ["email", "admin@email.com"], ["nickname", "admin"], ["password_digest", "$2a$10$6SogoSPKoDZudlWI1N3bQeB0RU9fROTHbQRsR4GPzf0SenIgAbz5e"], ["updated_at", "2017-05-01 21:40:51.483718"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_platform_data" SET "updated_at" = $1, "user_id" = $2 WHERE "user_platform_data"."id" = 3[0m  [["updated_at", "2017-05-01 21:40:51.485027"], ["user_id", 3]]
+  [1m[35m (26.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:40:51.529760"], ["deadline", "2017-02-20"], ["description", "Lorem ipsum"], ["expected_hours", 1.0], ["title", "Titolo1"], ["updated_at", "2017-05-01 21:40:51.529760"]]
+  [1m[36m (23.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:40:51.555888"], ["deadline", "2017-02-20"], ["description", "Viva telegram"], ["expected_hours", 1.0], ["title", "Titolo2"], ["updated_at", "2017-05-01 21:40:51.555888"]]
+  [1m[35m (22.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio1"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:40:51.580461"], ["deadline", "2017-02-20"], ["description", "Un articolo di prova"], ["expected_hours", 1.0], ["title", "Titolo3"], ["updated_at", "2017-05-01 21:40:51.580461"]]
+  [1m[36m (23.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:40:51.605766"], ["deadline", "2017-02-20"], ["description", "Universita la Sapienza"], ["expected_hours", 1.0], ["title", "Titolo4"], ["updated_at", "2017-05-01 21:40:51.605766"]]
+  [1m[35m (22.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio2"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:40:51.630451"], ["deadline", "2017-02-20"], ["description", "Laboratorio di Informatica"], ["expected_hours", 1.0], ["title", "Titolo5"], ["updated_at", "2017-05-01 21:40:51.630451"]]
+  [1m[36m (23.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 1], ["created_at", "2017-05-01 21:42:00.893318"], ["updated_at", "2017-05-01 21:42:00.893318"], ["wallet", 999]]
+  [1m[35m (32.3ms)[0m  COMMIT
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'email@email.com' LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'user' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"  [["access", 2], ["created_at", "2017-05-01 21:42:01.085870"], ["updated_at", "2017-05-01 21:42:01.085870"], ["wallet", 999]]
+  [1m[36m (25.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mod@email.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'mod' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 3], ["created_at", "2017-05-01 21:42:01.194020"], ["updated_at", "2017-05-01 21:42:01.194020"], ["wallet", 999]]
+  [1m[35m (25.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@email.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'admin' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:01.315407"], ["deadline", "2017-02-20"], ["description", "Lorem ipsum"], ["expected_hours", 1.0], ["title", "Titolo1"], ["updated_at", "2017-05-01 21:42:01.315407"]]
+  [1m[36m (25.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:01.346803"], ["deadline", "2017-02-20"], ["description", "Viva telegram"], ["expected_hours", 1.0], ["title", "Titolo2"], ["updated_at", "2017-05-01 21:42:01.346803"]]
+  [1m[35m (22.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio1"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:01.371754"], ["deadline", "2017-02-20"], ["description", "Un articolo di prova"], ["expected_hours", 1.0], ["title", "Titolo3"], ["updated_at", "2017-05-01 21:42:01.371754"]]
+  [1m[36m (22.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:01.396683"], ["deadline", "2017-02-20"], ["description", "Universita la Sapienza"], ["expected_hours", 1.0], ["title", "Titolo4"], ["updated_at", "2017-05-01 21:42:01.396683"]]
+  [1m[35m (23.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio2"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:01.421776"], ["deadline", "2017-02-20"], ["description", "Laboratorio di Informatica"], ["expected_hours", 1.0], ["title", "Titolo5"], ["updated_at", "2017-05-01 21:42:01.421776"]]
+  [1m[36m (22.9ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 1], ["created_at", "2017-05-01 21:42:12.480402"], ["updated_at", "2017-05-01 21:42:12.480402"], ["wallet", 999]]
+  [1m[35m (21.1ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'email@email.com' LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'user' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"  [["access", 2], ["created_at", "2017-05-01 21:42:12.629151"], ["updated_at", "2017-05-01 21:42:12.629151"], ["wallet", 999]]
+  [1m[36m (150.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mod@email.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'mod' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_platform_data" ("access", "created_at", "updated_at", "wallet") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["access", 3], ["created_at", "2017-05-01 21:42:12.862281"], ["updated_at", "2017-05-01 21:42:12.862281"], ["wallet", 999]]
+  [1m[35m (25.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'admin@email.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."nickname" = 'admin' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:12.979046"], ["deadline", "2017-02-20"], ["description", "Lorem ipsum"], ["expected_hours", 1.0], ["title", "Titolo1"], ["updated_at", "2017-05-01 21:42:12.979046"]]
+  [1m[36m (25.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:13.007024"], ["deadline", "2017-02-20"], ["description", "Viva telegram"], ["expected_hours", 1.0], ["title", "Titolo2"], ["updated_at", "2017-05-01 21:42:13.007024"]]
+  [1m[35m (21.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio1"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:13.031744"], ["deadline", "2017-02-20"], ["description", "Un articolo di prova"], ["expected_hours", 1.0], ["title", "Titolo3"], ["updated_at", "2017-05-01 21:42:13.031744"]]
+  [1m[36m (23.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["applicant_user", "tizio"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:13.057238"], ["deadline", "2017-02-20"], ["description", "Universita la Sapienza"], ["expected_hours", 1.0], ["title", "Titolo4"], ["updated_at", "2017-05-01 21:42:13.057238"]]
+  [1m[35m (21.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ads" ("applicant_user", "category", "created_at", "deadline", "description", "expected_hours", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["applicant_user", "tizio2"], ["category", "Categoria di prova"], ["created_at", "2017-05-01 21:42:13.081023"], ["deadline", "2017-02-20"], ["description", "Laboratorio di Informatica"], ["expected_hours", 1.0], ["title", "Titolo5"], ["updated_at", "2017-05-01 21:42:13.081023"]]
+  [1m[36m (23.4ms)[0m  [1mCOMMIT[0m
